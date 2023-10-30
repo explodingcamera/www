@@ -1,0 +1,100 @@
+---
+import HeaderItem from "./HeaderItem.astro";
+import Link from "./Link.astro";
+import github from "feather-icons/dist/icons/github.svg?raw";
+import key from "feather-icons/dist/icons/key.svg?raw";
+import linkedin from "feather-icons/dist/icons/linkedin.svg?raw";
+---
+
+<style>
+  @keyframes slidein {
+    0% {
+      transform: translateY(1.6rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .header {
+    @media print {
+      display: none;
+    }
+  }
+
+  .header ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1.8rem;
+    margin: 1rem 0 2rem 0;
+    overflow: hidden;
+  }
+
+  .header :global(.home) {
+    display: none;
+  }
+
+  @media only screen and (max-device-width: 400px) {
+    .header :global(.home) {
+      display: block;
+    }
+  }
+
+  .header :global(.title) {
+    margin-right: auto;
+    font-size: 1rem;
+    transform: translateY(0);
+  }
+
+  @media only screen and (max-device-width: 400px) {
+    .header :global(.title) {
+      display: none;
+    }
+  }
+
+  .item {
+    margin-right: 0.5rem;
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .item:last-of-type {
+    margin-right: 0;
+  }
+</style>
+
+<nav class="header">
+  <ol>
+    <HeaderItem gradient href="/" class:list={"title"}>
+      Henry Gressmann
+    </HeaderItem>
+    <HeaderItem gradient href="/" class:list={["home"]}>Home</HeaderItem>
+    <HeaderItem href="https://blog.henrygressmann.de" newTab>Blog</HeaderItem>
+    <HeaderItem href="/work">Work</HeaderItem>
+    <HeaderItem href="/me">About</HeaderItem>
+    <HeaderItem
+      aria-label="Github"
+      href="https://github.com/explodingcamera"
+      newTab
+    >
+      <Fragment set:html={github} />
+    </HeaderItem>
+    <HeaderItem
+      aria-label="PGP Keys"
+      href="https://keybase.io/explodingcamera/pgp_keys.asc"
+      newTab
+    >
+      <Fragment set:html={key} />
+    </HeaderItem>
+    <HeaderItem
+      aria-label="LinkedIn"
+      href="https://www.linkedin.com/in/henrygressmann/"
+      newTab
+    >
+      <Fragment set:html={linkedin} />
+    </HeaderItem>
+  </ol>
+</nav>

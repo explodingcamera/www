@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+import Card from "../components/Card.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="henrygressmann.de">
+  <div class="home">
+    <h2>
+      <span>Hi!</span> I'm Henry, a freelance software engineer based in Berlin.
+      <br /><br />
+      <Link href="/work">My work</Link> <br />
+      <Link href="/me">About me</Link> <br />
+      <Link href="mailto:mail@henrygressmann.de">Contact</Link> <br />
+    </h2>
+  </div>
+</Layout>
+
+<style>
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .home {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 8rem;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(270deg, #ff0000, #008cff, #50ff00);
+      background-size: 600% 600%;
+      animation: gradient 10s ease infinite;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin: 1rem 0;
+      font-weight: 200;
+      max-width: 44rem;
+
+      span, a {
+        font-weight: 400;
+      }
+
+      span {
+        font-weight: 500;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(270deg, #ff0000, #008cff, #50ff00);
+        background-size: 600% 600%;
+        animation: gradient 10s ease infinite;
+      }
+    }
+
+    @media only screen and (max-width: 60rem) {
+      h1 {
+        font-size: 15vw;
+      }
+      h2 {
+        font-size: 5vw;
+      }
+    }
+
+    @media only screen and (max-device-width: 500px) {
+      h2 {
+        font-size: 2.6rem;
+      }
+    }
+  }
+</style>

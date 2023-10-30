@@ -1,0 +1,27 @@
+{
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.0",
+    "@astrojs/react": "^3.0.4",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^3.4.0",
+    "astro-icon": "^0.8.1",
+    "feather-icons": "^4.29.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/three": "^0.158.0"
+  }
+}

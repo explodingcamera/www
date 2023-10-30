@@ -1,0 +1,85 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Background from "../components/Background.astro";
+import Link from "../components/Link.astro";
+import Header from "../components/Header.astro";
+
+interface Props {
+  title: string;
+  disableHeader?: boolean;
+  disableBackground?: boolean;
+  backgroundColor?: string;
+}
+
+const { title, backgroundColor, disableHeader, disableBackground } =
+  Astro.props;
+---
+
+<BaseLayout title={title}>
+  {!disableBackground && <Background />}
+  <div class="impressum">
+    <Link href="/impressum">legal notice/privacy policy</Link>
+  </div>
+  <div class="layoutwrapper">
+    {!disableHeader && <Header />}
+    <slot />
+  </div>
+</BaseLayout>
+
+<style define:vars={{ backgroundColor }}>
+  @keyframes slidein {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .layoutwrapper {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1280px;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-device-width: 480px) {
+    .layoutwrapper {
+      padding: 1rem;
+    }
+  }
+
+  .layoutwrapper > :not(nav) {
+    opacity: 0;
+    animation-delay: 0.1s;
+    animation-duration: 0.9s;
+    animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    animation-fill-mode: forwards;
+    animation-name: slidein;
+  }
+
+  .fallbackbg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color, black);
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .impressum {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    font-weight: 400;
+  }
+</style>

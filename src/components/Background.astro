@@ -1,0 +1,39 @@
+---
+
+---
+
+<div class="wrapper" data-starfield-wrapper>
+  <starfield-bg></starfield-bg>
+</div>
+
+<style>
+  .wrapper {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .wrapper[data-starfield-wrapper-loaded] {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  requestIdleCallback(
+    () => {
+      if (globalThis.customElements.get("starfield-bg")) return;
+
+      import("./Background.ts").then(() => {
+        document
+          .querySelector("[data-starfield-wrapper]")!
+          .setAttribute("data-starfield-wrapper-loaded", "true");
+      });
+    },
+    { timeout: 2000 }
+  );
+</script>

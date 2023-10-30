@@ -1,0 +1,83 @@
+---
+type Props = {
+  href: string;
+  target?: string;
+  animateFontColor?: boolean;
+  active?: boolean;
+};
+
+const { target, href, animateFontColor, active } = Astro.props;
+const fontColor = active || animateFontColor ? "white" : "#7e7e7e";
+---
+
+<a
+  class="link"
+  href={href}
+  target={target}
+  rel="noopener noreferrer"
+  data-active={active && "true"}
+  data-animate-font-color={animateFontColor && "true"}
+>
+  <slot />
+</a>
+
+<style define:vars={{ fontColor }}>
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  a.link:not([data-animate-font-color="true"]):before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background: linear-gradient(270deg, #ff0000, #008cff, #50ff00);
+    background-size: 600% 600%;
+    animation: gradient 30s ease infinite;
+    transform: scaleX(0);
+    transition: all 0.48s cubic-bezier(1, 0, 0, 1);
+    transform-origin: left;
+  }
+
+  a.link:not([data-animate-font-color="true"]):hover {
+    color: white;
+  }
+
+  a.link:hover::before {
+    transform: scaleX(1);
+  }
+
+  a.link {
+    transition: color 0.6s ease-in-out;
+    position: relative;
+    transition: color 0.6s ease-in-out;
+    text-decoration: none;
+    color: var(--fontColor);
+  }
+
+  a.link :global(svg) {
+    color: white;
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+
+  a.link[data-animate-font-color="true"]:hover {
+    color: white;
+    background: linear-gradient(270deg, #ff0000, #008cff, #50ff00);
+    background-size: 600% 600%;
+    animation: gradient 5s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
