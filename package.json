@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "henrygressmann.de",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,9 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.0",
-    "@astrojs/react": "^3.0.4",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
+    "@astrojs/sitemap": "^3.0.2",
     "astro": "^3.4.0",
     "astro-icon": "^0.8.1",
     "feather-icons": "^4.29.1",

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://henrygressmann.de/sitemap-index.xml
