@@ -2,8 +2,8 @@
 
 ---
 
-<div class="wrapper" data-starfield-wrapper>
-  <starfield-bg></starfield-bg>
+<div class="wrapper" data-starfield-wrapper transition:persist>
+  <canvas class="starfield" data-starfield-canvas></canvas>
 </div>
 
 <style>
@@ -24,16 +24,26 @@
 </style>
 
 <script>
-  requestIdleCallback(
+  document.addEventListener(
+    "astro:page-load",
     () => {
-      if (globalThis.customElements.get("starfield-bg")) return;
+      requestIdleCallback(
+        async () => {
+          console.log("Starfield loaded");
+          const { StarfieldBG } = await import("./Background.ts");
+          const canvas: HTMLCanvasElement = document.querySelector(
+            "[data-starfield-canvas]"
+          )!;
 
-      import("./Background.ts").then(() => {
-        document
-          .querySelector("[data-starfield-wrapper]")!
-          .setAttribute("data-starfield-wrapper-loaded", "true");
-      });
+          new StarfieldBG(canvas);
+
+          document
+            .querySelector("[data-starfield-wrapper]")!
+            .setAttribute("data-starfield-wrapper-loaded", "true");
+        },
+        { timeout: 2000 }
+      );
     },
-    { timeout: 2000 }
+    { once: true }
   );
 </script>

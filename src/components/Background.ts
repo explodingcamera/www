@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { inSphere } from "../utils/maath";
 
-class StarfieldBG extends HTMLElement {
+export class StarfieldBG {
   #canvas!: HTMLCanvasElement;
   #renderer!: THREE.WebGLRenderer;
   #scene!: THREE.Scene;
@@ -9,37 +9,12 @@ class StarfieldBG extends HTMLElement {
   #clock!: THREE.Clock;
   #points!: THREE.Points;
 
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-  }
-
-  connectedCallback() {
-    this.init();
-    this.#animate();
-    this.#addResizeListener();
-  }
-
-  #addResizeListener() {
-    window.addEventListener("resize", () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-
-      this.#renderer.setSize(width, height);
-      const aspect = width / height;
-
-      if (this.#camera instanceof THREE.PerspectiveCamera) {
-        this.#camera.aspect = aspect;
-        this.#camera.updateProjectionMatrix();
-      }
-    });
-  }
-
-  init() {
-    this.#canvas = document.createElement("canvas");
+  constructor(
+    canvas: HTMLCanvasElement,
+  ) {
+    this.#canvas = canvas;
     this.#renderer = new THREE.WebGLRenderer({ canvas: this.#canvas });
     this.#renderer.setSize(window.innerWidth, window.innerHeight);
-    this.shadowRoot!.appendChild(this.#canvas);
 
     this.#scene = new THREE.Scene();
 
@@ -116,6 +91,25 @@ class StarfieldBG extends HTMLElement {
 
     // Initialize clock
     this.#clock = new THREE.Clock();
+
+    this.#animate();
+    this.#addResizeListener();
+
+  }
+
+  #addResizeListener() {
+    window.addEventListener("resize", () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      this.#renderer.setSize(width, height);
+      const aspect = width / height;
+
+      if (this.#camera instanceof THREE.PerspectiveCamera) {
+        this.#camera.aspect = aspect;
+        this.#camera.updateProjectionMatrix();
+      }
+    });
   }
 
   #animate() {
@@ -137,6 +131,3 @@ class StarfieldBG extends HTMLElement {
     this.#renderer.render(this.#scene, this.#camera);
   }
 }
-
-// Register the custom element
-customElements.define("starfield-bg", StarfieldBG);

@@ -17,6 +17,7 @@
     "astro": "^3.4.0",
     "astro-icon": "^0.8.1",
     "feather-icons": "^4.29.1",
+    "modern-normalize": "^2.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "typescript": "^5.2.2"

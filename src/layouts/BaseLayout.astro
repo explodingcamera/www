@@ -6,11 +6,14 @@ interface Props {
 const { title } = Astro.props;
 
 import "./../global.css";
+import "modern-normalize/modern-normalize.css";
+import { ViewTransitions } from "astro:transitions";
 ---
 
-<!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="none" data-initial-load="false">
   <head>
+    <ViewTransitions />
+    <meta charset="UTF-8" />
     <meta name="referrer" content="no-referrer" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="google" content="notranslate" />
@@ -19,6 +22,7 @@ import "./../global.css";
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Henry Gressmann" />
     <meta name="twitter:site" content="@explodingcamera" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -33,5 +37,17 @@ import "./../global.css";
       defer
       data-domain="henrygressmann.de"
       src="https://a.explodingcamera.com/js/script.js"></script>
+    <script>
+      document.addEventListener(
+        "astro:page-load",
+        () => {
+          document.documentElement.dataset.initialLoad = "true";
+        },
+        { once: true }
+      );
+      document.addEventListener("astro:route-change", () => {
+        document.documentElement.dataset.initialLoad = "false";
+      });
+    </script>
   </body>
 </html>

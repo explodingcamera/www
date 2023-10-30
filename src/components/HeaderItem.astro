@@ -6,9 +6,10 @@ type Props = {
   gradient?: boolean;
   class?: string;
   newTab?: boolean;
+  delay?: number;
 };
 
-const { href, newTab, active, gradient, class: className } = Astro.props;
+const { delay, href, newTab, active, gradient, class: className } = Astro.props;
 ---
 
 <li class:list={[className, "item"]}>
@@ -22,11 +23,29 @@ const { href, newTab, active, gradient, class: className } = Astro.props;
   </Link>
 </li>
 
-<style>
+<style define:vars={{ delay }}>
+  @keyframes slideIn {
+    from {
+      transform: translateY(2rem);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
   .item {
     margin-right: 0.5rem;
     display: flex;
     transform: translateY(0);
+  }
+
+  :global(html[data-initial-load="true"]) .item {
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    animation-fill-mode: forwards;
+    animation-name: slideIn;
+    transform: translateY(2rem);
+    animation-delay: calc(var(--delay) * 0.04s);
   }
 
   .item:last-of-type {
