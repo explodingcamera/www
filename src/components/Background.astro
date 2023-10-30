@@ -29,7 +29,6 @@
     () => {
       requestIdleCallback(
         async () => {
-          console.log("Starfield loaded");
           const { StarfieldBG } = await import("./Background.ts");
           const canvas: HTMLCanvasElement = document.querySelector(
             "[data-starfield-canvas]"

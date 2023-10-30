@@ -33,17 +33,23 @@
 	font-display: fallback;
 }
 
-/* latin */
-/* @font-face {
-	font-family: 'Euclid Square';
-	font-style: normal;
-	font-weight: 700;
-	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Bold-WebS.woff2)
-			format('woff2'),
-		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Bold-WebS.woff)
-			format('woff');
-	font-display: fallback;
-} */
+::-webkit-scrollbar {
+	height: 12px;
+	width: 10px;
+	background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #1d1d1d;
+	-webkit-border-radius: 1ex;
+	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+	background: #000;
+}
+
+
 
 /* latin */
 @font-face {

@@ -2,14 +2,16 @@
 import Link from "./Link.astro";
 type Props = {
   href: string;
-  active?: boolean;
   gradient?: boolean;
   class?: string;
   newTab?: boolean;
   delay?: number;
 };
 
-const { delay, href, newTab, active, gradient, class: className } = Astro.props;
+const { delay, href, newTab, gradient, class: className } = Astro.props;
+
+const url = new URL(Astro.request.url);
+const active = url.pathname === href;
 ---
 
 <li class:list={[className, "item"]}>

@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/MainLayout.astro";
-import Card from "../components/Card.astro";
 import Link from "../components/Link.astro";
 ---
 
@@ -8,10 +7,14 @@ import Link from "../components/Link.astro";
   <div class="home">
     <h2>
       <span>Hi!</span> I'm Henry, a freelance software engineer based in Berlin.
+
       <br /><br />
-      <Link href="/work">My work</Link> <br />
-      <Link href="/me">About me</Link> <br />
-      <Link href="mailto:mail@henrygressmann.de">Contact</Link> <br />
+      <Link href="/work">My work</Link>
+      <br />
+      <Link href="/me">About me</Link>
+      <br />
+      <Link href="mailto:mail@henrygressmann.de">Contact</Link>
+      <br />
     </h2>
   </div>
 </Layout>
@@ -50,7 +53,8 @@ import Link from "../components/Link.astro";
       font-weight: 200;
       max-width: 44rem;
 
-      span, a {
+      span,
+      a {
         font-weight: 400;
       }
 
