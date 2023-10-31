@@ -1,6 +1,7 @@
 ---
 import Link from "./Link.astro";
 type Props = {
+  "aria-label"?: string;
   href: string;
   gradient?: boolean;
   class?: string;
@@ -8,7 +9,14 @@ type Props = {
   delay?: number;
 };
 
-const { delay, href, newTab, gradient, class: className } = Astro.props;
+const {
+  delay,
+  href,
+  newTab,
+  gradient,
+  class: className,
+  "aria-label": ariaLabel,
+} = Astro.props;
 
 const url = new URL(Astro.request.url);
 const active = url.pathname === href;
@@ -16,6 +24,7 @@ const active = url.pathname === href;
 
 <li class:list={[className, "item"]}>
   <Link
+    aria-label={ariaLabel}
     href={href}
     active={active}
     animateFontColor={gradient}

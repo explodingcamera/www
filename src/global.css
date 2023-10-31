@@ -6,7 +6,7 @@
 			format('woff2'),
 		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebXL.woff)
 			format('woff');
-	font-display: fallback;
+	font-display: swap;
 }
 
 /* latin */
@@ -18,7 +18,7 @@
 			format('woff2'),
 		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Medium-WebS.woff)
 			format('woff');
-	font-display: fallback;
+	font-display: swap;
 }
 
 /* latin */
@@ -30,7 +30,7 @@
 			format('woff2'),
 		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Semibold-WebS.woff)
 			format('woff');
-	font-display: fallback;
+	font-display: swap;
 }
 
 ::-webkit-scrollbar {
@@ -60,7 +60,7 @@
 			format('woff2'),
 		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Light-WebS.woff)
 			format('woff');
-	font-display: fallback;
+	font-display: swap;
 }
 
 html {

@@ -1,16 +1,24 @@
 ---
 type Props = {
+  "aria-label"?: string;
   href: string;
   target?: string;
   animateFontColor?: boolean;
   active?: boolean;
 };
 
-const { target, href, animateFontColor, active } = Astro.props;
+const {
+  target,
+  href,
+  animateFontColor,
+  active,
+  "aria-label": ariaLabel,
+} = Astro.props;
 const fontColor = active || animateFontColor ? "white" : "#7e7e7e";
 ---
 
 <a
+  aria-label={ariaLabel}
   class="link"
   href={href}
   target={target}

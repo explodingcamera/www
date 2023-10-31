@@ -9,7 +9,3 @@ This repository contains my website/portfolio. Feel free to use anything contain
 # Development
 
 1. Start dev server `$ bun run dev`
-
-# Deployment
-
-henrygressmann.de is deployed through Github Pages which is served behind a cloudflare reverse proxy automatically on every push to the `main` branch using Github Actions.
