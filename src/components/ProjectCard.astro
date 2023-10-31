@@ -1,0 +1,143 @@
+---
+type Props = {
+  title: string;
+  from: string;
+  img?: string;
+  text: string;
+  buttons?: Array<{ link: string; name: string }>;
+};
+
+const { title, from, img, text, buttons }: Props = Astro.props;
+---
+
+<div class="project">
+  <h1>
+    {title}
+    <span>{from}</span>
+  </h1>
+  {
+    img && (
+      <div class="image">
+        <img src={`/static/projects/${img}`} alt={title} />
+      </div>
+    )
+  }
+  <p>{text}</p>
+  {
+    buttons && (
+      <div>
+        {buttons.map((b) => (
+          <a target="_blank" rel="noopener noreferrer" href={b.link}>
+            <button>{b.name}</button>
+          </a>
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .project:hover {
+    background: #1b1b1d80;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background: #0f10119d;
+    transition: all 0.2s linear;
+
+    margin-bottom: 1rem;
+
+    --padding-lr: 1.3rem;
+    padding: 1.1rem var(--padding-lr);
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.14);
+
+    h1 {
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.7rem;
+      letter-spacing: -1px;
+      align-items: center;
+
+      span {
+        padding-left: 0.5rem;
+        font-weight: 400;
+        font-feature-settings: "ss12" 1;
+        font-size: 1rem;
+        color: aqua;
+        letter-spacing: -0.3px;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0;
+      line-height: 1.4;
+      text-shadow: 0px 0px 5px black;
+      white-space: pre-line;
+    }
+
+    div:last-of-type {
+      margin-top: 1rem;
+      display: flex;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .project button {
+    border-radius: 8px;
+    text-decoration: none;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    height: 2.7rem;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow:
+      rgba(0, 0, 0, 0.02) 0px 2px 2px 0px,
+      rgba(0, 0, 0, 0.055) 0px 3px 1px -2px,
+      rgba(0, 0, 0, 0.027) 0px 1px 5px 0px;
+    margin: 0px 0.5rem 0px 0px;
+    padding: 0px 0.8rem;
+    outline: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    /* background-color: #46424266; */
+    background-color: #00000000;
+    border: 1.7px solid #46424266;
+    transition: all 0.2s ease-in-out 0s;
+    box-sizing: content-box;
+    &:hover {
+      border: 1.7px solid #ffffff;
+    }
+  }
+
+  .project .image {
+    position: relative;
+    aspect-ratio: 16/9;
+    background-color: black;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    width: calc(100% + var(--padding-lr) * 2);
+    margin-left: calc(-1 * var(--padding-lr));
+
+    img {
+      height: inherit;
+      width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+</style>

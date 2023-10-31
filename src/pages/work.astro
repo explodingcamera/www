@@ -1,5 +1,25 @@
 ---
+import ProjectCard from "../components/ProjectCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import projects from "./../projects.json";
 ---
 
-<MainLayout title="henrygressmann.de" />
+<MainLayout title="My Work">
+  <div class="container">
+    <masonry-grid>
+      {projects.map((p) => <ProjectCard {...p} />)}
+    </masonry-grid>
+  </div>
+</MainLayout>
+
+<style>
+  .container {
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
+    animation-fill-mode: backwards;
+  }
+</style>
+
+<script src="../components/Masonry"></script>

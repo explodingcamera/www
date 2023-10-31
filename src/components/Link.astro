@@ -22,18 +22,6 @@ const fontColor = active || animateFontColor ? "white" : "#7e7e7e";
 </a>
 
 <style define:vars={{ fontColor }}>
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
   a.link:not([data-animate-font-color="true"]):before {
     content: "";
     position: absolute;
