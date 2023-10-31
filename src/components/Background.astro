@@ -24,25 +24,22 @@
 </style>
 
 <script>
+  const run = async () => {
+    const { StarfieldBG } = await import("./Background.ts");
+    const canvas: HTMLCanvasElement = document.querySelector(
+      "[data-starfield-canvas]"
+    )!;
+
+    new StarfieldBG(canvas);
+
+    document
+      .querySelector("[data-starfield-wrapper]")!
+      .setAttribute("data-starfield-wrapper-loaded", "true");
+  };
+
   document.addEventListener(
     "astro:page-load",
-    () => {
-      requestIdleCallback(
-        async () => {
-          const { StarfieldBG } = await import("./Background.ts");
-          const canvas: HTMLCanvasElement = document.querySelector(
-            "[data-starfield-canvas]"
-          )!;
-
-          new StarfieldBG(canvas);
-
-          document
-            .querySelector("[data-starfield-wrapper]")!
-            .setAttribute("data-starfield-wrapper-loaded", "true");
-        },
-        { timeout: 2000 }
-      );
-    },
+    () => requestIdleCallback(() => setTimeout(run, 500), { timeout: 2000 }),
     { once: true }
   );
 </script>

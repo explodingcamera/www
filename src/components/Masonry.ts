@@ -34,7 +34,10 @@ const TEMPLATE_STRING = `
   }
 
   #items {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 10000px;
+    left: 10000px;
   }
 </style>
 <div id="items">

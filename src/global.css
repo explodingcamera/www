@@ -1,12 +1,23 @@
 @font-face {
 	font-family: 'Euclid Square';
 	font-style: normal;
+	font-weight: 200;
+	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Light-WebS.woff2)
+			format('woff2'),
+		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Light-WebS.woff)
+			format('woff');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Euclid Square';
+	font-style: normal;
 	font-weight: 400;
 	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebXL.woff2)
 			format('woff2'),
 		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebXL.woff)
 			format('woff');
-	font-display: swap;
+	font-display: fallback;
 }
 
 /* latin */
@@ -18,7 +29,7 @@
 			format('woff2'),
 		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Medium-WebS.woff)
 			format('woff');
-	font-display: swap;
+	font-display: fallback;
 }
 
 /* latin */
@@ -30,7 +41,7 @@
 			format('woff2'),
 		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Semibold-WebS.woff)
 			format('woff');
-	font-display: swap;
+	font-display: fallback;
 }
 
 ::-webkit-scrollbar {
@@ -49,19 +60,6 @@
 	background: #000;
 }
 
-
-
-/* latin */
-@font-face {
-	font-family: 'Euclid Square';
-	font-style: normal;
-	font-weight: 200;
-	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Light-WebS.woff2)
-			format('woff2'),
-		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Light-WebS.woff)
-			format('woff');
-	font-display: swap;
-}
 
 html {
 	background: black;
