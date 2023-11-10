@@ -50,7 +50,6 @@ class MasonryComponent extends HTMLElement {
   #shadow: ShadowRoot;
   #resizeObserver: ResizeObserver | null = null;
   #columns: number = 0;
-  #slot: HTMLSlotElement;
   #grid: HTMLDivElement;
 
   constructor() {
@@ -61,7 +60,6 @@ class MasonryComponent extends HTMLElement {
     template.innerHTML = TEMPLATE_STRING;
 
     this.#shadow.appendChild(template.content.cloneNode(true));
-    this.#slot = this.shadowRoot!.querySelector<HTMLSlotElement>("#items > slot")!;
     this.#grid = this.shadowRoot!.querySelector<HTMLDivElement>("#grid")!;
   }
 
@@ -99,7 +97,7 @@ class MasonryComponent extends HTMLElement {
     } else {
       numColumns = parseInt(this.getAttribute('lg') || "3");
     }
-    
+
     if (numColumns === this.#columns) return;
 
     // remove existing columns
@@ -121,9 +119,9 @@ class MasonryComponent extends HTMLElement {
   renderItems() {
     const children = Array.from(this.children);
 
-    for(const [i, child] of children.entries()) {
+    for (const [i, child] of children.entries()) {
       let columnIndex = i % this.#columns;
-      const column =  `column-${columnIndex}`;
+      const column = `column-${columnIndex}`;
       if (child.slot !== column) child.slot = column;
     }
   }

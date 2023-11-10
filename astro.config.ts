@@ -6,4 +6,5 @@ export default defineConfig({
   integrations: [sitemap()],
   site: "https://henrygressmann.de",
   compressHTML: true,
+  prefetch: true,
 });
