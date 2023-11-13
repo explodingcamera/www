@@ -17,9 +17,13 @@ import projects from "./../projects.json";
     animation-name: fadeOut;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
-    animation-delay: 0.4s;
     animation-fill-mode: backwards;
   }
-</style>
 
-<script src="../components/Masonry"></script>
+  /* size below 1080 */
+  @media (max-width: 1080px) {
+    .container {
+      animation-delay: 0.4s;
+    }
+  }
+</style>

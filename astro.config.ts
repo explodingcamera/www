@@ -7,4 +7,7 @@ export default defineConfig({
   site: "https://henrygressmann.de",
   compressHTML: true,
   prefetch: true,
+  build: {
+    inlineStylesheets: 'always'
+  }
 });

@@ -8,10 +8,11 @@ const { title } = Astro.props;
 import "./../global.css";
 import "modern-normalize/modern-normalize.css";
 import { ViewTransitions } from "astro:transitions";
+import { Head } from "astro-capo";
 ---
 
-<html lang="en" transition:animate="none" data-initial-load="false">
-  <head>
+<html lang="en" transition:animate="none" data-initial-load="true">
+  <Head>
     <ViewTransitions />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta charset="UTF-8" />
@@ -37,26 +38,37 @@ import { ViewTransitions } from "astro:transitions";
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.henrygressmann.de" />
+    <link
+      rel="preconnect"
+      href="https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="preconnect" href="https://a.explodingcamera.com" />
     <title>{title}</title>
-  </head>
+  </Head>
   <body>
     <slot />
     <script>
-      document.addEventListener(
-        "astro:page-load",
-        () => {
-          document.documentElement.dataset.initialLoad = "true";
-        },
-        { once: true }
-      );
-      document.addEventListener("astro:route-change", () => {
+      // let initialLoad = false;
+      // document.addEventListener(
+      //   "astro:page-load",
+      //   () => {
+      //     initialLoad = true;
+      //   },
+      //   { once: true },
+      // );
+      document.addEventListener("astro:after-swap", () => {
+        // if (!initialLoad)
         document.documentElement.dataset.initialLoad = "false";
       });
     </script>
+    <script src="../components/Masonry"></script>
     <script
+      defer
       async
+      is:inline
       data-domain="henrygressmann.de"
       src="https://a.explodingcamera.com/js/script.js"></script>
   </body>

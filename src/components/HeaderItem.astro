@@ -19,7 +19,7 @@ const {
 } = Astro.props;
 
 const url = new URL(Astro.request.url);
-const active = url.pathname === href;
+const active = url.pathname === href || url.pathname === `${href}/`;
 ---
 
 <li class:list={[className, "item"]}>
@@ -47,16 +47,17 @@ const active = url.pathname === href;
   .item {
     margin-right: 0.5rem;
     display: flex;
-    transform: translateY(0);
-  }
-
-  :global(html[data-initial-load="true"]) .item {
+    transform: translateY(2rem);
     animation-duration: 0.5s;
     animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
     animation-fill-mode: forwards;
     animation-name: slideIn;
-    transform: translateY(2rem);
     animation-delay: calc(var(--delay) * 0.04s);
+  }
+
+  :global(html:not([data-initial-load="true"])) .item {
+    transform: translateY(0);
+    animation: none;
   }
 
   .item:last-of-type {

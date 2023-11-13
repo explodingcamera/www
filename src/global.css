@@ -1,48 +1,22 @@
 @font-face {
 	font-family: 'Euclid Square';
 	font-style: normal;
-	font-weight: 200;
-	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Light-WebS.woff2)
-			format('woff2'),
-		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Light-WebS.woff)
-			format('woff');
-	font-display: fallback;
-}
-
-@font-face {
-	font-family: 'Euclid Square';
-	font-style: normal;
 	font-weight: 400;
-	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebXL.woff2)
-			format('woff2'),
-		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebXL.woff)
-			format('woff');
-	font-display: fallback;
+	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff2) format('woff2'),
+		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff) format('woff');
+	font-display: block;
 }
 
-/* latin */
-@font-face {
-	font-family: 'Euclid Square';
-	font-style: normal;
-	font-weight: 500;
-	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Medium-WebS.woff2)
-			format('woff2'),
-		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Medium-WebS.woff)
-			format('woff');
-	font-display: fallback;
-}
 
 /* latin */
-@font-face {
+/* @font-face {
 	font-family: 'Euclid Square';
 	font-style: normal;
 	font-weight: 600;
-	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Semibold-WebS.woff2)
-			format('woff2'),
-		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Semibold-WebS.woff)
-			format('woff');
-	font-display: fallback;
-}
+	src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Semibold-WebS.woff2) format('woff2'),
+		url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Semibold-WebS.woff) format('woff');
+	font-display: block;
+} */
 
 ::-webkit-scrollbar {
 	height: 12px;
@@ -84,7 +58,18 @@ h2 {
 	font-weight: 500;
 }
 
-h1, h2, h3, h4, h5, h6, body, button, input, optgroup, select, textarea {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
 	margin: 0;
 }
 
@@ -109,11 +94,15 @@ abbr[title] {
 	text-decoration: underline dotted;
 }
 
-b, strong {
+b,
+strong {
 	font-weight: bolder;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
 	font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 	font-size: 1em;
 }
@@ -122,7 +111,8 @@ small {
 	font-size: 80%;
 }
 
-sub, sup {
+sub,
+sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
@@ -141,6 +131,7 @@ table {
 	border-color: inherit;
 }
 
-button, select {
+button,
+select {
 	text-transform: none;
 }

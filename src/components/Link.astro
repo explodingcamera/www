@@ -30,7 +30,7 @@ const fontColor = active || animateFontColor ? "white" : "#7e7e7e";
 </a>
 
 <style define:vars={{ fontColor }}>
-  a.link:not([data-animate-font-color="true"]):before {
+  a.link:not([data-animate-font-color="true"])::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -63,9 +63,11 @@ const fontColor = active || animateFontColor ? "white" : "#7e7e7e";
   }
 
   a.link :global(svg) {
-    color: white;
-    height: 1.3rem;
-    width: 1.3rem;
+    height: 1.4rem;
+    width: 1.4rem;
+    padding: 0.3rem;
+    margin-left: 0.1rem;
+    box-sizing: content-box;
   }
 
   a.link[data-animate-font-color="true"]:hover {

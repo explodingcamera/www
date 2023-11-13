@@ -25,9 +25,11 @@
 
 <script>
   const run = async () => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const { StarfieldBG } = await import("./Background.ts");
     const canvas: HTMLCanvasElement = document.querySelector(
-      "[data-starfield-canvas]"
+      "[data-starfield-canvas]",
     )!;
 
     new StarfieldBG(canvas);
@@ -40,6 +42,6 @@
   document.addEventListener(
     "astro:page-load",
     () => requestIdleCallback(() => setTimeout(run, 500), { timeout: 2000 }),
-    { once: true }
+    { once: true },
   );
 </script>
