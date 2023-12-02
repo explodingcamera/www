@@ -4,7 +4,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Schedule a Meeting">
   <iframe
-    frameborder="0"
     class="meet"
     src="https://app.cal.com/henrygressmann/meeting"
     allowfullscreen={false}></iframe>
@@ -12,6 +11,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <style>
   .meet {
+    border: 0;
     flex: 1;
     padding-bottom: 20px;
   }
