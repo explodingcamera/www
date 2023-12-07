@@ -94,8 +94,43 @@ export class StarfieldBG {
 
     this.#animate();
     this.#addResizeListener();
-
+    this.#addMouseMoveListener();
+    this.#addGyroListener();
   }
+
+  #posX = 0;
+  #posY = 0;
+
+  #addGyroListener() {
+    window.addEventListener("deviceorientation", (event) => {
+      const x = event.beta;
+      const y = event.gamma;
+      if (x === null || y === null) {
+        return;
+      }
+
+      const xNorm = (x / 180) * 2 - 1;
+      const yNorm = (y / 180) * 2 - 1;
+
+      this.#posX = xNorm * 0.16;
+      this.#posY = yNorm * 0.16;
+    });
+  }
+
+  #addMouseMoveListener() {
+    window.addEventListener("mousemove", (event) => {
+      const x = event.clientX;
+      const y = event.clientY;
+
+      const xNorm = (x / window.innerWidth) * 2 - 1;
+      const yNorm = -(y / window.innerHeight) * 2 + 1;
+
+      this.#posX = xNorm * 0.16;
+      this.#posY = yNorm * 0.16;
+    });
+  }
+
+
 
   #addResizeListener() {
     window.addEventListener("resize", () => {
@@ -122,6 +157,13 @@ export class StarfieldBG {
     const delta = this.#clock.getDelta();
     this.#points.rotation.x -= delta / 10;
     this.#points.rotation.y += delta / 25;
+
+    // slowly transition to the mouse position
+    const xDiff = this.#posX - this.#points.position.x;
+    const yDiff = this.#posY - this.#points.position.y;
+    this.#points.position.x += xDiff * 0.1;
+    this.#points.position.y += yDiff * 0.1;
+
 
     const opacity = Math.max((this.#clock.elapsedTime - 0.3) / 5, 0);
     if (opacity <= 1) {
