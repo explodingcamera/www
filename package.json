@@ -19,10 +19,10 @@
     "postcss-preset-env": "^9.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "three": "^0.159.0",
+    "three": "^0.160.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@types/three": "^0.159.0"
+    "@types/three": "^0.160.0"
   }
 }
