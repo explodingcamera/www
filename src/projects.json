@@ -1,13 +1,69 @@
 [
   {
-    "title": "Keygate",
-    "from": "2022-now",
-    "img": "keygate.webp",
-    "text": "Modular and open-source identity management, authentication and authorization. Coming out Q3 2023",
+    "title": "Open Source",
+    "from": "2016-now",
+    "text": "I've created and contributed to a lot of open source projects over the years. You can find all of them on my Github profile.",
     "buttons": [
       {
-        "link": "https://keygate.io",
-        "name": "keygate.io"
+        "link": "https://github.com/explodingcamera",
+        "name": "Github"
+      }
+    ]
+  },
+  {
+    "title": "Freelance",
+    "from": "2022-now",
+    "text": "I'm currently working as a freelance developer, working on a variety of projects. Main focus is on web development and React Native/Expo."
+  },
+  {
+    "title": "tinywasm",
+    "from": "2023-now",
+    "img": "tinywasm.png",
+    "text": "A open-source WebAssembly runtime suitable for embedded systems and operating systems. Initially created as part of my University Capstone Project.",
+    "buttons": [
+      {
+        "link": "https://github.com/explodingcamera/tinywasm",
+        "name": "Github"
+      }
+    ]
+  },
+  {
+    "title": "dawdle.space",
+    "from": "2023-now",
+    "img": "dawdle.webp",
+    "text": "A non-profit 'social network' for hosting and sharing creative projects. Users can use the custom webinterface or connect to their own lightweight vm through a custom ssh proxy.",
+    "buttons": [
+      {
+        "link": "https://dawdle.space",
+        "name": "dawdle.space"
+      }
+    ]
+  },
+  {
+    "title": "nots.dev",
+    "from": "2023-now",
+    "img": "nots.jpg",
+    "text": "A open source self-hosted cloud platform — Just bring your code, and Nots will take care of the rest. Coming out 2024.",
+    "buttons": [
+      {
+        "link": "https://github.com/explodingcamera/nots",
+        "name": "Github"
+      },
+      {
+        "link": "https://nots.dev",
+        "name": "nots.dev"
+      }
+    ]
+  },
+  {
+    "title": "StayGo",
+    "from": "2023-now",
+    "img": "staygo.webp",
+    "text": "canX StayGo helps you keep track of all your things and helps you to see if you really need them.\nI am currently working on the first version of the app.",
+    "buttons": [
+      {
+        "link": "https://staygo.de/download",
+        "name": "App Store/Play Store"
       }
     ]
   },
@@ -28,14 +84,14 @@
     ]
   },
   {
-    "title": "StayGo",
-    "from": "2023-now",
-    "img": "staygo-app.webp",
-    "text": "canX StayGo helps you keep track of all your things and helps you to see if you really need them.\\nI am currently working on the first version of the app.",
+    "title": "Keygate",
+    "from": "2022-now",
+    "img": "keygate.webp",
+    "text": "Modular and open-source identity management, authentication and authorization. Currently being rewritten with a focus on minimalism and security.",
     "buttons": [
       {
-        "link": "https://staygo.app",
-        "name": "staygo.app"
+        "link": "https://keygate.io",
+        "name": "keygate.io"
       }
     ]
   },
@@ -75,7 +131,7 @@
     "title": "Snowstorm",
     "from": "2021-2022",
     "img": "snowstorm.webp",
-    "text": "Snowstorm is a lean and fast alternative to next.js, made possible by utilizing new technologies like ES modules and new build tools like es-build. Further, Snowstorm is build from the ground up with React 18.0 in mind. It supports a broader ecosystem instead of building a walled garden.",
+    "text": "Snowstorm is a lean and fast alternative to next.js, made possible by utilizing new technologies like ES modules and new build tools like es-build.\n\nFurther, Snowstorm is build from the ground up with React 18/Suspense in mind. It supports a broader ecosystem instead of building a walled garden.\n\nDiscontinued as Snowpack is no longer actively maintained.",
     "buttons": [
       {
         "link": "https://github.com/explodingcamera/snowstorm",
@@ -88,22 +144,10 @@
     ]
   },
   {
-    "title": "dawdle.space",
-    "from": "2021-now",
-    "img": "dawdle.webp",
-    "text": "A home for many of my smaller, experimental and older projects",
-    "buttons": [
-      {
-        "link": "https://dawdle.space",
-        "name": "dawdle.space"
-      }
-    ]
-  },
-  {
     "title": "Etournity",
     "from": "2020",
     "img": "etournity.webp",
-    "text": "Etournity wants gamers to organize and participate in online esports tournaments effortlessly.\\n\\nI joined the Etournity team as a developer in the summer of 2020. My focus was on transitioning the project to next.js and securing the GraphQL API.",
+    "text": "Etournity wants gamers to organize and participate in online esports tournaments effortlessly.\n\nI joined the Etournity team as a developer in the summer of 2020. My focus was on transitioning the project to next.js and securing the GraphQL API.",
     "buttons": [
       {
         "link": "https://etournity.com",
@@ -115,7 +159,7 @@
     "title": "FantasyMarket",
     "from": "2020",
     "img": "fantasymarket.webp",
-    "text": "FantasyMarket is a working stock market simulation where the user can invest in-game currency in a simulated market wholly separated from the real world.\\n\\nI created the software architecture and designed and implemented the react frontend.",
+    "text": "FantasyMarket is a working stock market simulation where the user can invest in-game currency in a simulated market wholly separated from the real world.\n\nI created the software architecture and designed and implemented the react frontend.",
     "buttons": [
       {
         "link": "https://github.com/fantasymarket",
@@ -133,7 +177,7 @@
     "title": "recordskip",
     "from": "2019",
     "img": "recordskip.jpeg",
-    "text": "Recordskip is an app for vinyl record lovers tracks your collection with the help of Image Recognition and gives you music recommendations for expanding your musical horizons.\\n\\nI designed the App and implemented it with React Native.",
+    "text": "Recordskip is an app for vinyl record lovers tracks your collection with the help of Image Recognition and gives you music recommendations for expanding your musical horizons.\n\nI designed the App and implemented it with React Native.",
     "buttons": [
       {
         "link": "https://github.com/recordskip/recordskip-app",
@@ -173,7 +217,7 @@
     "title": "musiqpad",
     "from": "2016",
     "img": "musiqpad-min.webp",
-    "text": "Musiqpad ia an open-source social-music software platform for users to host their own chatrooms and enjoy music together with others.\\n\\nI worked on modernizing the codebase and finding and fixing security vulnerabilities.",
+    "text": "Musiqpad ia an open-source social-music software platform for users to host their own chatrooms and enjoy music together with others.\n\nI worked on modernizing the codebase and finding and fixing security vulnerabilities.",
     "buttons": [
       {
         "link": "https://github.com/musiqpad/mqp-server",
