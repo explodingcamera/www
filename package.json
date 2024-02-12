@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.4.1",
+    "@astrojs/check": "^0.5.3",
     "@astrojs/sitemap": "^3.0.5",
-    "@explodingcamera/css": "^0.0.2",
-    "astro": "^4.3.2",
+    "@explodingcamera/css": "^0.0.3",
+    "astro": "^4.3.6",
     "astro-capo": "^0.0.1",
     "feather-icons": "^4.29.1",
     "postcss-preset-env": "^9.3.0",
