@@ -41,7 +41,7 @@
 
   document.addEventListener(
     "astro:page-load",
-    () => requestIdleCallback(() => setTimeout(run, 500), { timeout: 2000 }),
+    () => requestIdleCallback(() => run()),
     { once: true }
   );
 </script>

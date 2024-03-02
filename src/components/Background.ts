@@ -86,41 +86,41 @@ export class StarfieldBG {
 
 		this.#animate();
 		this.#addResizeListener();
-		this.#addMouseMoveListener();
-		this.#addGyroListener();
+		// this.#addMouseMoveListener();
+		// this.#addGyroListener();
 	}
 
 	#posX = 0;
 	#posY = 0;
 
-	#addGyroListener() {
-		window.addEventListener("deviceorientation", (event) => {
-			const x = event.beta;
-			const y = event.gamma;
-			if (x === null || y === null) {
-				return;
-			}
+	// #addGyroListener() {
+	// 	window.addEventListener("deviceorientation", (event) => {
+	// 		const x = event.beta;
+	// 		const y = event.gamma;
+	// 		if (x === null || y === null) {
+	// 			return;
+	// 		}
 
-			const xNorm = (x / 180) * 2 - 1;
-			const yNorm = (y / 180) * 2 - 1;
+	// 		const xNorm = (x / 180) * 2 - 1;
+	// 		const yNorm = (y / 180) * 2 - 1;
 
-			this.#posX = xNorm * 0.16;
-			this.#posY = yNorm * 0.16;
-		});
-	}
+	// 		this.#posX = xNorm * 0.16;
+	// 		this.#posY = yNorm * 0.16;
+	// 	});
+	// }
 
-	#addMouseMoveListener() {
-		window.addEventListener("mousemove", (event) => {
-			const x = event.clientX;
-			const y = event.clientY;
+	// #addMouseMoveListener() {
+	// 	window.addEventListener("mousemove", (event) => {
+	// 		const x = event.clientX;
+	// 		const y = event.clientY;
 
-			const xNorm = (x / window.innerWidth) * 2 - 1;
-			const yNorm = -(y / window.innerHeight) * 2 + 1;
+	// 		const xNorm = (x / window.innerWidth) * 2 - 1;
+	// 		const yNorm = -(y / window.innerHeight) * 2 + 1;
 
-			this.#posX = xNorm * 0.16;
-			this.#posY = yNorm * 0.16;
-		});
-	}
+	// 		this.#posX = xNorm * 0.16;
+	// 		this.#posY = yNorm * 0.16;
+	// 	});
+	// }
 
 	#addResizeListener() {
 		window.addEventListener("resize", () => {
