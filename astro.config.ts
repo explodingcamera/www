@@ -1,5 +1,5 @@
-import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,5 +8,8 @@ export default defineConfig({
 	prefetch: true,
 	build: {
 		inlineStylesheets: "always",
+	},
+	vite: {
+		css: { transformer: "lightningcss" },
 	},
 });
