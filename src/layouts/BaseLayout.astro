@@ -1,6 +1,6 @@
 ---
 interface Props {
-  title: string;
+	title: string;
 }
 
 const { title } = Astro.props;
@@ -9,12 +9,11 @@ import "@explodingcamera/css/all.css";
 import "./../global.css";
 
 import { ViewTransitions } from "astro:transitions";
-import { Head } from "astro-capo";
 ---
 
 <html lang="en" transition:animate="none" data-initial-load="true">
-  <Head>
-    <ViewTransitions />
+  <head>
+    <title>{title}</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta charset="UTF-8" />
     <meta name="referrer" content="no-referrer" />
@@ -39,6 +38,7 @@ import { Head } from "astro-capo";
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <ViewTransitions /> 
     <link
       rel="preconnect"
       href="https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff2"
@@ -47,8 +47,7 @@ import { Head } from "astro-capo";
       crossorigin
     />
     <link rel="preconnect" href="https://a.explodingcamera.com" />
-    <title>{title}</title>
-  </Head>
+  </head>
   <body>
     <slot />
     <script>
