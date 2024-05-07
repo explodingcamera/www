@@ -3,45 +3,46 @@
 ---
 
 <div class="wrapper" data-starfield-wrapper transition:persist>
-  <canvas class="starfield" data-starfield-canvas></canvas>
+    <canvas class="starfield" data-starfield-canvas></canvas>
 </div>
 
 <style>
-  .wrapper {
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
+    .wrapper {
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
 
-  .wrapper[data-starfield-wrapper-loaded] {
-    opacity: 1;
-  }
+    .wrapper[data-starfield-wrapper-loaded] {
+        opacity: 1;
+    }
 </style>
 
 <script>
-  const run = async () => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const run = async () => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+            return;
 
-    const { StarfieldBG } = await import("./Background.ts");
-    const canvas: HTMLCanvasElement = document.querySelector(
-      "[data-starfield-canvas]"
-    )!;
+        const { StarfieldBG } = await import("./Background.ts");
+        const canvas: HTMLCanvasElement = document.querySelector(
+            "[data-starfield-canvas]",
+        )!;
 
-    new StarfieldBG(canvas);
+        new StarfieldBG(canvas);
 
-    document
-      .querySelector("[data-starfield-wrapper]")!
-      .setAttribute("data-starfield-wrapper-loaded", "true");
-  };
+        document
+            .querySelector("[data-starfield-wrapper]")!
+            .setAttribute("data-starfield-wrapper-loaded", "true");
+    };
 
-  document.addEventListener(
-    "astro:page-load",
-    () => requestIdleCallback(() => run()),
-    { once: true }
-  );
+    document.addEventListener(
+        "astro:page-load",
+        () => requestIdleCallback(() => run()),
+        { once: true },
+    );
 </script>
