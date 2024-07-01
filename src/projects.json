@@ -12,7 +12,7 @@
 	},
 	{
 		"title": "Freelance",
-		"from": "2022-now",
+		"from": "2022-2024",
 		"text": "I'm currently working as a freelance developer, working on a variety of projects. Main focus is on web development and React Native/Expo."
 	},
 	{
@@ -85,7 +85,7 @@
 	},
 	{
 		"title": "Keygate",
-		"from": "2022-now",
+		"from": "2023-now",
 		"img": "keygate.webp",
 		"text": "Modular and open-source identity management, authentication and authorization. Currently being rewritten with a focus on minimalism and security.",
 		"buttons": [
@@ -131,7 +131,7 @@
 		"title": "Snowstorm",
 		"from": "2021-2022",
 		"img": "snowstorm.webp",
-		"text": "Snowstorm is a lean and fast alternative to next.js, made possible by utilizing new technologies like ES modules and new build tools like es-build.\n\nFurther, Snowstorm is build from the ground up with React 18/Suspense in mind. It supports a broader ecosystem instead of building a walled garden.\n\nDiscontinued as Snowpack is no longer actively maintained.",
+		"text": "Snowstorm is a lightweight alternative to next.js, made possible by utilizing new technologies like ES modules and new build tools like es-build.\n\nFurther, Snowstorm is build from the ground up with React 18/Suspense in mind. It supports a broader ecosystem instead of building a walled garden.\n\nDiscontinued as the underlying bundler, Snowpack, is no longer actively maintained.",
 		"buttons": [
 			{
 				"link": "https://github.com/explodingcamera/snowstorm",
@@ -166,12 +166,6 @@
 				"name": "code"
 			}
 		]
-	},
-	{
-		"title": "clickland.app",
-		"from": "2020",
-		"img": "clickland.webp",
-		"text": "Clickland is a game platform I was working on at the start of 2020, based around a central clicker-based gameworld connected to many mini-games similar to neopets."
 	},
 	{
 		"title": "recordskip",
