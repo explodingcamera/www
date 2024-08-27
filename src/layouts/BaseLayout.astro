@@ -1,6 +1,6 @@
 ---
 interface Props {
-  title: string;
+	title: string;
 }
 
 const { title } = Astro.props;
@@ -51,25 +51,11 @@ import { ViewTransitions } from "astro:transitions";
   <body>
     <slot />
     <script>
-      // let initialLoad = false;
-      // document.addEventListener(
-      //   "astro:page-load",
-      //   () => {
-      //     initialLoad = true;
-      //   },
-      //   { once: true },
-      // );
       document.addEventListener("astro:after-swap", () => {
-        // if (!initialLoad)
         document.documentElement.dataset.initialLoad = "false";
       });
     </script>
     <script src="../components/Masonry"></script>
-    <script
-      defer
-      async
-      is:inline
-      src="https://a.explodingcamera.com/script.js"
-      data-website-id="95085972-c21e-458a-b835-36659010fcf8"></script>
+    <script type="module" data-entity=henrygressmann.de src="https://a.explodingcamera.com/script.js" is:inline></script>
   </body>
 </html>
