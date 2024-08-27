@@ -6,8 +6,10 @@ export default defineConfig({
 	integrations: [sitemap()],
 	site: "https://henrygressmann.de",
 	prefetch: true,
+	trailingSlash: "never",
 	build: {
 		inlineStylesheets: "always",
+		format: "file",
 	},
 	vite: {
 		css: { transformer: "lightningcss" },
