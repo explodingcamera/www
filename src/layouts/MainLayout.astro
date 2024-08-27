@@ -5,38 +5,38 @@ import Link from "../components/Link.astro";
 import Header from "../components/Header.astro";
 
 interface Props {
-  title: string;
-  disableHeader?: boolean;
-  disableBackground?: boolean;
-  backgroundColor?: string;
+	title: string;
+	disableHeader?: boolean;
+	disableBackground?: boolean;
+	backgroundColor?: string;
 }
 
 const { title, backgroundColor, disableHeader, disableBackground } =
-  Astro.props;
+	Astro.props;
 
 import type {
-  TransitionAnimationPair,
-  TransitionDirectionalAnimations,
+	TransitionAnimationPair,
+	TransitionDirectionalAnimations,
 } from "astro";
 
 const anim: TransitionAnimationPair = {
-  old: {
-    name: "fadeIn",
-    duration: 100,
-    easing: "linear",
-    fillMode: "forwards",
-  },
-  new: {
-    name: "fadeOut",
-    duration: 400,
-    easing: "cubic-bezier(0.46, 0.03, 0.52, 0.96)",
-    fillMode: "backwards",
-  },
+	old: {
+		name: "fadeIn",
+		duration: 100,
+		easing: "linear",
+		fillMode: "forwards",
+	},
+	new: {
+		name: "fadeOut",
+		duration: 400,
+		easing: "cubic-bezier(0.46, 0.03, 0.52, 0.96)",
+		fillMode: "backwards",
+	},
 };
 
 const myFade: TransitionDirectionalAnimations = {
-  forwards: anim,
-  backwards: anim,
+	forwards: anim,
+	backwards: anim,
 };
 ---
 
@@ -79,7 +79,7 @@ const myFade: TransitionDirectionalAnimations = {
 <BaseLayout title={title}>
   {!disableBackground && <Background />}
   <div class="impressum">
-    <Link href="/impressum">legal notice/privacy policy</Link>
+    <a href="/impressum">legal notice/privacy policy</a>
   </div>
   <div class="layoutwrapper">
     {!disableHeader && <Header />}
@@ -145,10 +145,22 @@ const myFade: TransitionDirectionalAnimations = {
   }
 
   .impressum {
+    font-weight: 500;
+    font-size: 1.1rem;
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 1rem;
-    font-weight: 400;
+    z-index: 10;
+    padding-bottom: 1.2rem;
+    
+    a {
+      color: #777777;
+      padding: 1.2rem;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover {
+        color: white;
+      }
+    }
   }
 </style>

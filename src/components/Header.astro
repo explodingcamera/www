@@ -21,6 +21,7 @@ import linkedin from "feather-icons/dist/icons/linkedin.svg?raw";
     min-height: 1.8rem;
     margin: 1rem 0 2rem 0;
     overflow: hidden;
+    gap: 0.1rem;
   }
 
   .header :global(.home) {
@@ -68,6 +69,7 @@ import linkedin from "feather-icons/dist/icons/linkedin.svg?raw";
       aria-label="Github"
       href="https://github.com/explodingcamera"
       newTab
+      gradient
       class:list={["icon"]}
     >
       <Fragment set:html={github} />
@@ -77,6 +79,7 @@ import linkedin from "feather-icons/dist/icons/linkedin.svg?raw";
       aria-label="PGP Keys"
       href="https://keybase.io/explodingcamera/pgp_keys.asc"
       newTab
+      gradient
       class:list={["icon"]}
     >
       <Fragment set:html={key} />
@@ -86,6 +89,7 @@ import linkedin from "feather-icons/dist/icons/linkedin.svg?raw";
       aria-label="LinkedIn"
       href="https://www.linkedin.com/in/henrygressmann/"
       newTab
+      gradient
       class:list={["icon"]}
     >
       <Fragment set:html={linkedin} />

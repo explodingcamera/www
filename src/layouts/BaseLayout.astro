@@ -11,7 +11,7 @@ import "./../global.css";
 import { ViewTransitions } from "astro:transitions";
 ---
 
-<html lang="en" transition:animate="none" data-initial-load="true">
+<html lang="en" transition:animate="none">
   <head>
     <title>{title}</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -50,11 +50,6 @@ import { ViewTransitions } from "astro:transitions";
   </head>
   <body>
     <slot />
-    <script>
-      document.addEventListener("astro:after-swap", () => {
-        document.documentElement.dataset.initialLoad = "false";
-      });
-    </script>
     <script src="../components/Masonry"></script>
     <script type="module" data-entity=henrygressmann.de src="https://a.explodingcamera.com/script.js" is:inline></script>
   </body>

@@ -1,25 +1,23 @@
 ---
 import Link from "./Link.astro";
 type Props = {
-  "aria-label"?: string;
-  href: string;
-  gradient?: boolean;
-  class?: string;
-  newTab?: boolean;
-  delay?: number;
+	"aria-label"?: string;
+	href: string;
+	gradient?: boolean;
+	class?: string;
+	newTab?: boolean;
 };
 
 const {
-  delay,
-  href,
-  newTab,
-  gradient,
-  class: className,
-  "aria-label": ariaLabel,
+	href,
+	newTab,
+	gradient,
+	class: className,
+	"aria-label": ariaLabel,
 } = Astro.props;
 
 const url = new URL(Astro.request.url);
-const active = url.pathname === href || url.pathname === `${href}/`;
+const active = url.pathname === href || url.pathname === `${href}.html`;
 ---
 
 <li class:list={[className, "item"]}>
@@ -34,30 +32,13 @@ const active = url.pathname === href || url.pathname === `${href}/`;
   </Link>
 </li>
 
-<style define:vars={{ delay }}>
-  @keyframes slideIn {
-    from {
-      transform: translateY(2rem);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-
+<style >
   .item {
-    margin-right: 0.5rem;
     display: flex;
-    transform: translateY(2rem);
-    animation-duration: 0.5s;
-    animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
-    animation-fill-mode: forwards;
-    animation-name: slideIn;
-    animation-delay: calc(var(--delay) * 0.04s);
-  }
 
-  :global(html:not([data-initial-load="true"])) .item {
-    transform: translateY(0);
-    animation: none;
+    :global(a) {
+      padding: .3rem;
+    }
   }
 
   .item:last-of-type {
