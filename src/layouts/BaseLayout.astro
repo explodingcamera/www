@@ -57,13 +57,5 @@ import { ViewTransitions } from "astro:transitions";
     </script>
     <script src="../components/Masonry"></script>
     <script type="module" data-entity=henrygressmann.de src="https://a.explodingcamera.com/script.js" is:inline></script>
-    <script>
-      window.history.pushState = new Proxy(window.history.pushState, {
-        apply: (target, thisArg, argArray) => {
-          console.log("pushState", argArray);
-          target.apply(thisArg, argArray);
-        },
-      });
-    </script>
   </body>
 </html>
