@@ -26,7 +26,11 @@ const fontColor = active || animateFontColor ? "white" : "#7e7e7e";
   rel="noopener noreferrer"
   data-active={active && "true"}
   data-animate-font-color={animateFontColor && "true"}
->{label ? label :<slot />}</a><style define:vars={{ fontColor }}>
+>
+  {label ? label :<slot />}
+</a>
+
+<style define:vars={{ fontColor }}>
   a.link:not([data-animate-font-color="true"])::before {
     content: "";
     position: absolute;
