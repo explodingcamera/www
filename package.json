@@ -10,15 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.2.0",
+    "@astrojs/sitemap": "^3.2.1",
     "@explodingcamera/css": "^0.0.4",
-    "astro": "^4.15.11",
+    "astro": "^4.16.6",
     "feather-icons": "^4.29.2",
     "lightningcss": "^1.27.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "three": "^0.169.0",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
     "@types/three": "^0.169.0"
