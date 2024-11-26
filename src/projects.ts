@@ -1,21 +1,5 @@
 export const projects = [
 	{
-		title: "Open Source",
-		from: "2016-now",
-		text: "I've created and contributed to a lot of open source projects over the years. You can find all of them on my Github profile.",
-		buttons: [
-			{
-				link: "https://github.com/explodingcamera",
-				name: "Github",
-			},
-		],
-	},
-	{
-		title: "Freelance",
-		from: "2022-2024",
-		text: "I'm currently working as a freelance developer, working on a variety of projects. Main focus is on web development and React Native/Expo.",
-	},
-	{
 		title: "Liwan",
 		from: "2024-now",
 		img: "liwan.webp",
@@ -27,6 +11,18 @@ export const projects = [
 			},
 			{
 				link: "https://github.com/explodingcamera/liwan",
+				name: "Github",
+			},
+		],
+	},
+
+	{
+		title: "Open Source",
+		from: "2016-now",
+		text: "I've created and contributed to a lot of open source projects over the years. You can find all of them on my Github profile.",
+		buttons: [
+			{
+				link: "https://github.com/explodingcamera",
 				name: "Github",
 			},
 		],
@@ -43,18 +39,10 @@ export const projects = [
 			},
 		],
 	},
-
 	{
-		title: "dawdle.space",
-		from: "2023-now",
-		img: "dawdle2.webp",
-		text: "dawdle.space is a community for sharing art, free software, and building fun websites. Includes a custom-built code editor and ssh proxy for running code.",
-		buttons: [
-			{
-				link: "https://dawdle.space",
-				name: "dawdle.space",
-			},
-		],
+		title: "Freelance",
+		from: "2022-2024",
+		text: "I've worked with a large variety of clients, focusing on web development and React Native/Expo apps.",
 	},
 	// {
 	// 	title: "StayGo",
@@ -81,6 +69,18 @@ export const projects = [
 			{
 				link: "https://github.com/explodingcamera/pogos",
 				name: "code",
+			},
+		],
+	},
+	{
+		title: "dawdle.space",
+		from: "2023-now",
+		img: "dawdle2.webp",
+		text: "dawdle.space is a community for sharing art, free software, and building fun websites. Includes a custom-built code editor and ssh proxy for running code.",
+		buttons: [
+			{
+				link: "https://dawdle.space",
+				name: "dawdle.space",
 			},
 		],
 	},
@@ -112,7 +112,6 @@ export const projects = [
 			},
 		],
 	},
-
 	{
 		title: "nots.dev",
 		from: "2023-now",

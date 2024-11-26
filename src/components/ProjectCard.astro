@@ -1,10 +1,12 @@
 ---
+import { Image } from "astro:assets";
+
 type Props = {
-  title: string;
-  from: string;
-  img?: string;
-  text: string;
-  buttons?: Array<{ link: string; name: string }>;
+	title: string;
+	from: string;
+	img?: string;
+	text: string;
+	buttons?: Array<{ link: string; name: string }>;
 };
 
 const { title, from, img, text, buttons }: Props = Astro.props;
@@ -18,7 +20,7 @@ const { title, from, img, text, buttons }: Props = Astro.props;
   {
     img && (
       <div class="image">
-        <img src={`/static/projects/${img}`} alt={title} />
+        <img src={`../static/projects/${img}`} alt={title}  />
       </div>
     )
   }
