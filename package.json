@@ -12,7 +12,7 @@
 	"dependencies": {
 		"@astrojs/sitemap": "3.2.1",
 		"@explodingcamera/css": "^0.0.4",
-		"astro": "5.0.3",
+		"astro": "5.1.1",
 		"feather-icons": "^4.29.2",
 		"lightningcss": "^1.28.2",
 		"react": "^19.0.0",
@@ -21,6 +21,6 @@
 		"typescript": "^5.7.2"
 	},
 	"devDependencies": {
-		"@types/three": "^0.170.0"
+		"@types/three": "^0.171.0"
 	}
 }
