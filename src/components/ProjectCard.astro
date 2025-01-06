@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 type Props = {
 	title: string;
 	from: string;
@@ -11,7 +9,7 @@ type Props = {
 
 const { title, from, img, text, buttons }: Props = Astro.props;
 ---
-
+ 
 <div class="project">
   <h1>
     {title}

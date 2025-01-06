@@ -24,29 +24,29 @@ import linkedin from "feather-icons/dist/icons/linkedin.svg?raw";
     gap: 0.1rem;
   }
 
-  .header :global(.home) {
+  .header ::global(.home) {
     display: none;
   }
 
   @media only screen and (max-device-width: 500px) {
-    .header :global(.home) {
+    .header ::global(.home) {
       display: block;
     }
   }
 
-  .header :global(.title) {
+  .header ::global(.title) {
     margin-right: auto;
     font-size: 1rem;
     transform: translateY(0);
   }
 
   @media only screen and (max-device-width: 500px) {
-    .header :global(.title) {
+    .header ::global(.title) {
       display: none;
     }
   }
 
-  .header :global(.icon) {
+  .header ::global(.icon) {
     margin: 0;
   }
 </style>
