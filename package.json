@@ -12,15 +12,15 @@
 	"dependencies": {
 		"@astrojs/sitemap": "3.2.1",
 		"@explodingcamera/css": "^0.0.4",
-		"astro": "5.1.2",
+		"astro": "5.4.2",
 		"feather-icons": "^4.29.2",
-		"lightningcss": "^1.28.2",
+		"lightningcss": "^1.29.1",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
-		"three": "^0.172.0",
-		"typescript": "^5.7.2"
+		"three": "^0.174.0",
+		"typescript": "^5.8.2"
 	},
 	"devDependencies": {
-		"@types/three": "^0.171.0"
+		"@types/three": "^0.174.0"
 	}
 }
