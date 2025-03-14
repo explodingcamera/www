@@ -1,7 +1,6 @@
 html {
   background: black;
-  font-family: "Euclid Square", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
+  font-family: "Euclid Square", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 #nprogress .bar {
@@ -20,10 +19,8 @@ h2 {
   font-family: "Euclid Square";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff2)
-      format("woff2"),
-    url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff)
-      format("woff");
+  src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff2) format("woff2"),
+    url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff) format("woff");
   font-display: block;
 }
 

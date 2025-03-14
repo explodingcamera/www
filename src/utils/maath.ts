@@ -58,11 +58,7 @@ export class Generator {
 
 const defaultGen = new Generator(Math.random());
 
-export function inSphere(
-	buffer: TypedArray,
-	sphere?: Sphere,
-	rng: Generator = defaultGen,
-) {
+export function inSphere(buffer: TypedArray, sphere?: Sphere, rng: Generator = defaultGen) {
 	const { radius, center } = {
 		...defaultSphere,
 		...sphere,

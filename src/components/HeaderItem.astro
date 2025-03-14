@@ -8,13 +8,7 @@ type Props = {
 	newTab?: boolean;
 };
 
-const {
-	href,
-	newTab,
-	gradient,
-	class: className,
-	"aria-label": ariaLabel,
-} = Astro.props;
+const { href, newTab, gradient, class: className, "aria-label": ariaLabel } = Astro.props;
 
 const url = new URL(Astro.request.url);
 const active = url.pathname === href || url.pathname === `${href}.html`;

@@ -1,7 +1,7 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
 import Background from "../components/Background.astro";
 import Header from "../components/Header.astro";
+import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
 	title: string;
@@ -10,13 +10,9 @@ interface Props {
 	backgroundColor?: string;
 }
 
-const { title, backgroundColor, disableHeader, disableBackground } =
-	Astro.props;
+const { title, backgroundColor, disableHeader, disableBackground } = Astro.props;
 
-import type {
-	TransitionAnimationPair,
-	TransitionDirectionalAnimations,
-} from "astro";
+import type { TransitionAnimationPair, TransitionDirectionalAnimations } from "astro";
 
 const anim: TransitionAnimationPair = {
 	old: {
