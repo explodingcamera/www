@@ -31,7 +31,7 @@ export const projects = [
 		title: "tinywasm",
 		from: "2023-now",
 		img: "tinywasm.png",
-		text: "A open-source WebAssembly runtime suitable for embedded systems and operating systems. Initially created as part of my University Capstone Project.",
+		text: "A open-source WebAssembly runtime suitable for embedded systems and operating systems",
 		buttons: [
 			{
 				link: "https://github.com/explodingcamera/tinywasm",
@@ -112,38 +112,38 @@ export const projects = [
 			},
 		],
 	},
-	{
-		title: "nots.dev",
-		from: "2023-now",
-		img: "nots.jpg",
-		text: "A open source self-hosted cloud platform — Just bring your code, and Nots will take care of the rest. Currently in development.",
-		buttons: [
-			{
-				link: "https://github.com/explodingcamera/nots",
-				name: "Github",
-			},
-			{
-				link: "https://nots.dev",
-				name: "nots.dev",
-			},
-		],
-	},
-	{
-		title: "pog.network",
-		from: "2021-2022",
-		img: "pog.network.webp",
-		text: "With POG.network we're striving to build a green and fast cryptocurrency. I'm the team lead, designed the protocol and created the architecture of the project",
-		buttons: [
-			{
-				link: "https://github.com/pognetwork",
-				name: "code",
-			},
-			{
-				link: "https://pog.network",
-				name: "pog.network",
-			},
-		],
-	},
+	// {
+	// 	title: "nots.dev",
+	// 	from: "2023-now",
+	// 	img: "nots.jpg",
+	// 	text: "A open source self-hosted cloud platform — Just bring your code, and Nots will take care of the rest. Currently in development.",
+	// 	buttons: [
+	// 		{
+	// 			link: "https://github.com/explodingcamera/nots",
+	// 			name: "Github",
+	// 		},
+	// 		{
+	// 			link: "https://nots.dev",
+	// 			name: "nots.dev",
+	// 		},
+	// 	],
+	// },
+	// {
+	// 	title: "pog.network",
+	// 	from: "2021-2022",
+	// 	img: "pog.network.webp",
+	// 	text: "With POG.network we're striving to build a green and fast cryptocurrency. I'm the team lead, designed the protocol and created the architecture of the project",
+	// 	buttons: [
+	// 		{
+	// 			link: "https://github.com/pognetwork",
+	// 			name: "code",
+	// 		},
+	// 		{
+	// 			link: "https://pog.network",
+	// 			name: "pog.network",
+	// 		},
+	// 	],
+	// },
 	{
 		title: "Snowstorm",
 		from: "2021-2022",
