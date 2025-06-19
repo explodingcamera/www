@@ -19,7 +19,8 @@ h2 {
   font-family: "Euclid Square";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff2) format("woff2"),
+  src:
+    url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff2) format("woff2"),
     url(https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff) format("woff");
   font-display: block;
 }
