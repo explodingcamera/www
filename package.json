@@ -12,16 +12,16 @@
 	"dependencies": {
 		"@astrojs/sitemap": "3.4.1",
 		"@explodingcamera/css": "^0.0.4",
-		"astro": "5.10.0",
+		"astro": "5.10.2",
 		"feather-icons": "^4.29.2",
 		"lightningcss": "^1.30.1",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
-		"three": "^0.177.0",
+		"three": "^0.178.0",
 		"typescript": "^5.8.3"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.0.0",
-		"@types/three": "^0.177.0"
+		"@biomejs/biome": "^2.0.6",
+		"@types/three": "^0.178.0"
 	}
 }
