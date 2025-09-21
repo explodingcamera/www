@@ -90,15 +90,15 @@ class MasonryComponent extends HTMLElement {
 		const width = this.clientWidth;
 		let numColumns: number;
 
-		const sm = Number.parseInt(getComputedStyle(this).getPropertyValue("--breakpoint-sm"));
-		const md = Number.parseInt(getComputedStyle(this).getPropertyValue("--breakpoint-md"));
+		const sm = Number.parseInt(getComputedStyle(this).getPropertyValue("--breakpoint-sm"), 10);
+		const md = Number.parseInt(getComputedStyle(this).getPropertyValue("--breakpoint-md"), 10);
 
 		if (width <= sm) {
-			numColumns = Number.parseInt(this.getAttribute("sm") || "1");
+			numColumns = Number.parseInt(this.getAttribute("sm") || "1", 10);
 		} else if (width <= md) {
-			numColumns = Number.parseInt(this.getAttribute("md") || "2");
+			numColumns = Number.parseInt(this.getAttribute("md") || "2", 10);
 		} else {
-			numColumns = Number.parseInt(this.getAttribute("lg") || "3");
+			numColumns = Number.parseInt(this.getAttribute("lg") || "3", 10);
 		}
 
 		if (numColumns === this.#columns) return;
