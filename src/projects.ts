@@ -1,5 +1,10 @@
 export const projects = [
 	{
+		title: "AnyDesk",
+		from: "2025-now",
+		text: "I'm currently working at AnyDesk Software GmbH as a Backend Software Engineer, focusing on building scalable and efficient backend systems with Rust.",
+	},
+	{
 		title: "Liwan",
 		from: "2024-now",
 		img: "liwan.webp",
@@ -148,7 +153,7 @@ export const projects = [
 		title: "Snowstorm",
 		from: "2021-2022",
 		img: "snowstorm.webp",
-		text: "Snowstorm is a lightweight alternative to next.js, made possible by utilizing new technologies like ES modules and new build tools like es-build.\n\nFurther, Snowstorm is build from the ground up with React 18/Suspense in mind. It supports a broader ecosystem instead of building a walled garden.\n\nDiscontinued as the underlying bundler, Snowpack, is no longer actively maintained.",
+		text: "Snowstorm is a lightweight alternative to next.js, made possible by utilizing new technologies like React Suspend, ES modules and new build tools like esbuild.\n\nSnowpack is now discontinued as the underlying bundler, Snowpack, is no longer actively maintained.",
 		buttons: [
 			{
 				link: "https://github.com/explodingcamera/snowstorm",
@@ -176,7 +181,7 @@ export const projects = [
 		title: "FantasyMarket",
 		from: "2020",
 		img: "fantasymarket.webp",
-		text: "FantasyMarket is a working stock market simulation where the user can invest in-game currency in a simulated market wholly separated from the real world.",
+		text: "FantasyMarket is a working stock market simulation where the user can invest in-game currency in a simulated market.",
 		buttons: [
 			{
 				link: "https://github.com/fantasymarket",
@@ -212,12 +217,8 @@ export const projects = [
 		title: "livecount.pro",
 		from: "2017 - 2019",
 		img: "livecount-min.webp",
-		text: "LiveCount Pro is a real-time anaylytics platform and dashboard with support for multiple social networks and multiple channels simultaneously.",
+		text: "LiveCount Pro (now discontinued) was a real-time anaylytics platform and dashboard with support for multiple social networks and multiple channels simultaneously.",
 		buttons: [
-			{
-				link: "https://livecount.pro",
-				name: "livecount.pro",
-			},
 			{
 				link: "https://github.com/explodingcamera/livecount.pro",
 				name: "code",
