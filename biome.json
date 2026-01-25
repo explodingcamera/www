@@ -30,7 +30,17 @@
 				"noArrayIndexKey": "off"
 			},
 			"a11y": {
-				"useSemanticElements": "off"
+				"useSemanticElements": "off",
+				"noStaticElementInteractions": "off"
+			},
+			"style": {
+				"noDescendingSpecificity": "off"
+			},
+			"complexity": {
+				"noImportantStyles": "off"
+			},
+			"correctness": {
+				"useUniqueElementIds": "off"
 			}
 		}
 	},

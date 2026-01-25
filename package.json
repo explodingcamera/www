@@ -10,18 +10,21 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "3.6.0",
+		"@astrojs/sitemap": "3.7.0",
 		"@explodingcamera/css": "^0.0.4",
-		"astro": "5.16.6",
+		"astro": "5.16.15",
 		"feather-icons": "^4.29.2",
-		"lightningcss": "^1.30.2",
+		"lightningcss": "^1.31.1",
 		"react": "^19.2.3",
 		"react-dom": "^19.2.3",
 		"three": "^0.182.0",
 		"typescript": "^5.9.3"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.3.10",
+		"@biomejs/biome": "^2.3.12",
 		"@types/three": "^0.182.0"
-	}
+	},
+	"trustedDependencies": [
+		"core-js"
+	]
 }
