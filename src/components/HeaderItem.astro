@@ -1,14 +1,20 @@
 ---
 import Link from "./Link.astro";
 type Props = {
-	"aria-label"?: string;
-	href: string;
-	gradient?: boolean;
-	class?: string;
-	newTab?: boolean;
+  "aria-label"?: string;
+  href: string;
+  gradient?: boolean;
+  class?: string;
+  newTab?: boolean;
 };
 
-const { href, newTab, gradient, class: className, "aria-label": ariaLabel } = Astro.props;
+const {
+  href,
+  newTab,
+  gradient,
+  class: className,
+  "aria-label": ariaLabel,
+} = Astro.props;
 
 const url = new URL(Astro.request.url);
 const active = url.pathname === href || url.pathname === `${href}.html`;

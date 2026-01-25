@@ -4,34 +4,38 @@ import Header from "../components/Header.astro";
 import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
-	title: string;
-	disableHeader?: boolean;
-	disableBackground?: boolean;
-	backgroundColor?: string;
+  title: string;
+  disableHeader?: boolean;
+  disableBackground?: boolean;
+  backgroundColor?: string;
 }
 
-const { title, backgroundColor, disableHeader, disableBackground } = Astro.props;
+const { title, backgroundColor, disableHeader, disableBackground } =
+  Astro.props;
 
-import type { TransitionAnimationPair, TransitionDirectionalAnimations } from "astro";
+import type {
+  TransitionAnimationPair,
+  TransitionDirectionalAnimations,
+} from "astro";
 
 const anim: TransitionAnimationPair = {
-	old: {
-		name: "fadeIn",
-		duration: 100,
-		easing: "linear",
-		fillMode: "forwards",
-	},
-	new: {
-		name: "fadeOut",
-		duration: 400,
-		easing: "cubic-bezier(0.46, 0.03, 0.52, 0.96)",
-		fillMode: "backwards",
-	},
+  old: {
+    name: "fadeIn",
+    duration: 100,
+    easing: "linear",
+    fillMode: "forwards",
+  },
+  new: {
+    name: "fadeOut",
+    duration: 400,
+    easing: "cubic-bezier(0.46, 0.03, 0.52, 0.96)",
+    fillMode: "backwards",
+  },
 };
 
 const myFade: TransitionDirectionalAnimations = {
-	forwards: anim,
-	backwards: anim,
+  forwards: anim,
+  backwards: anim,
 };
 ---
 
