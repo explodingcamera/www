@@ -12,7 +12,7 @@
 	"dependencies": {
 		"@astrojs/sitemap": "3.7.2",
 		"@explodingcamera/css": "^0.0.4",
-		"astro": "6.3.1",
+		"astro": "6.3.3",
 		"feather-icons": "^4.29.2",
 		"lightningcss": "^1.32.0",
 		"react": "^19.2.6",
@@ -21,7 +21,7 @@
 		"typescript": "^6.0.3"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.14",
+		"@biomejs/biome": "^2.4.15",
 		"@types/three": "^0.184.1"
 	},
 	"trustedDependencies": [
