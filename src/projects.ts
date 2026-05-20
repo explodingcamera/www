@@ -1,14 +1,31 @@
 export const projects = [
 	{
-		title: "AnyDesk",
+		title: "AnyDesk Software GmbH",
 		from: "2025-now",
-		text: "I'm currently working at AnyDesk Software GmbH as a Backend Software Engineer, focusing on building scalable and efficient backend systems with Rust.",
+		text: "I work at AnyDesk as a Backend Engineer, developing core services for large-scale remote connectivity infrastructure. My work focuses on high-throughput Rust services, reliability and performance.",
+	},
+	{
+		title: "tinywasm",
+		from: "2023-now",
+		img: "tinywasm.png",
+		text: "Open-source WebAssembly runtime written in Rust, with 500+ GitHub stars. Designed for portability, safe execution, minimal dependencies, and constrained environments such as embedded systems.",
+		buttons: [
+			{
+				link: "https://github.com/explodingcamera/tinywasm",
+				name: "GitHub",
+			},
+		],
+	},
+	{
+		title: "Freelance",
+		from: "2022-2024",
+		text: "I worked with clients across different industries, delivering web and mobile applications, backend services, and custom technical solutions. This gave me broad experience across product development, client communication, and varied technology stacks.",
 	},
 	{
 		title: "Liwan",
 		from: "2024-now",
 		img: "liwan.webp",
-		text: "Easy & privacy-first web analytics. Liwan is an open source web analytics platform that respects your users' privacy. No cookies, no cross-site tracking, no persistent identifiers. ",
+		text: "Open-source, privacy-focused web analytics written in Rust. Liwan is designed for self-hosted deployment with a single binary, low operational overhead, and privacy-preserving analytics without cookies, cross-site tracking, or persistent identifiers.",
 		buttons: [
 			{
 				link: "https://liwan.dev",
@@ -16,7 +33,7 @@ export const projects = [
 			},
 			{
 				link: "https://github.com/explodingcamera/liwan",
-				name: "Github",
+				name: "GitHub",
 			},
 		],
 	},
@@ -24,64 +41,35 @@ export const projects = [
 	{
 		title: "Open Source",
 		from: "2016-now",
-		text: "I've created and contributed to a lot of open source projects over the years. You can find all of them on my Github profile.",
+		text: "I build and maintain open-source projects across Rust, WebAssembly, web infrastructure, developer tooling, and self-hosted software. My work ranges from long-running projects to smaller libraries and experiments.",
 		buttons: [
 			{
 				link: "https://github.com/explodingcamera",
-				name: "Github",
+				name: "GitHub",
 			},
 		],
-	},
-	{
-		title: "tinywasm",
-		from: "2023-now",
-		img: "tinywasm.png",
-		text: "A open-source WebAssembly runtime suitable for embedded systems and operating systems",
-		buttons: [
-			{
-				link: "https://github.com/explodingcamera/tinywasm",
-				name: "Github",
-			},
-		],
-	},
-	{
-		title: "Freelance",
-		from: "2022-2024",
-		text: "I've worked with a large variety of clients, focusing on web development and React Native/Expo apps.",
 	},
 	// {
-	// 	title: "StayGo",
-	// 	from: "2023-now",
-	// 	img: "staygo.webp",
-	// 	text: "canX StayGo helps you keep track of all your things and helps you to see if you really need them.\nI am currently working on the first version of the app.",
+	// 	title: "Creating an Operating System in Rust",
+	// 	from: "2023",
+	// 	img: "os.webp",
+	// 	text: "A series of blog posts guiding you through the process of creating an operating system in Rust",
 	// 	buttons: [
 	// 		{
-	// 			link: "https://staygo.de/download",
-	// 			name: "App Store/Play Store",
+	// 			link: "https://blog.henrygressmann.de/series/rust-os/",
+	// 			name: "blog",
+	// 		},
+	// 		{
+	// 			link: "https://github.com/explodingcamera/pogos",
+	// 			name: "GitHub",
 	// 		},
 	// 	],
 	// },
 	{
-		title: "Creating an Operating System in Rust",
-		from: "2023",
-		img: "os.webp",
-		text: "A series of blog posts guiding you through the process of creating an operating system in Rust",
-		buttons: [
-			{
-				link: "https://blog.henrygressmann.de/series/rust-os/",
-				name: "blog",
-			},
-			{
-				link: "https://github.com/explodingcamera/pogos",
-				name: "code",
-			},
-		],
-	},
-	{
 		title: "dawdle.space",
 		from: "2023-now",
 		img: "dawdle2.webp",
-		text: "dawdle.space is a community for sharing art, free software, and building fun websites. Includes a custom-built code editor and ssh proxy for running code.",
+		text: "Community platform for sharing art, free software, and personal websites. Includes custom infrastructure for hosted sites, interactive editing, and code execution.",
 		buttons: [
 			{
 				link: "https://dawdle.space",
@@ -101,22 +89,22 @@ export const projects = [
 	// 		},
 	// 	],
 	// },
-	{
-		title: "Koi",
-		from: "2023",
-		img: "koi.webp",
-		text: "Koi is a new lossless image format that is designed for embedded systems and game engines",
-		buttons: [
-			{
-				link: "https://github.com/explodingcamera/koi-rs",
-				name: "code",
-			},
-			{
-				link: "https://blog.henrygressmann.de/koi",
-				name: "blog post",
-			},
-		],
-	},
+	// {
+	// 	title: "Koi",
+	// 	from: "2023",
+	// 	img: "koi.webp",
+	// 	text: "Koi is a new lossless image format that is designed for embedded systems and game engines",
+	// 	buttons: [
+	// 		{
+	// 			link: "https://github.com/explodingcamera/koi-rs",
+	// 			name: "GitHub",
+	// 		},
+	// 		{
+	// 			link: "https://blog.henrygressmann.de/koi",
+	// 			name: "blog post",
+	// 		},
+	// 	],
+	// },
 	// {
 	// 	title: "nots.dev",
 	// 	from: "2023-now",
@@ -125,7 +113,7 @@ export const projects = [
 	// 	buttons: [
 	// 		{
 	// 			link: "https://github.com/explodingcamera/nots",
-	// 			name: "Github",
+	// 			name: "GitHub",
 	// 		},
 	// 		{
 	// 			link: "https://nots.dev",
@@ -141,7 +129,7 @@ export const projects = [
 	// 	buttons: [
 	// 		{
 	// 			link: "https://github.com/pognetwork",
-	// 			name: "code",
+	// 			name: "GitHub",
 	// 		},
 	// 		{
 	// 			link: "https://pog.network",
@@ -149,27 +137,27 @@ export const projects = [
 	// 		},
 	// 	],
 	// },
-	{
-		title: "Snowstorm",
-		from: "2021-2022",
-		img: "snowstorm.webp",
-		text: "Snowstorm is a lightweight alternative to next.js, made possible by utilizing new technologies like React Suspend, ES modules and new build tools like esbuild.\n\nSnowpack is now discontinued as the underlying bundler, Snowpack, is no longer actively maintained.",
-		buttons: [
-			{
-				link: "https://github.com/explodingcamera/snowstorm",
-				name: "code",
-			},
-			{
-				link: "https://snowstorm.js.org",
-				name: "snowstorm.js.org",
-			},
-		],
-	},
+	// {
+	// 	title: "Snowstorm",
+	// 	from: "2021-2022",
+	// 	img: "snowstorm.webp",
+	// 	text: "Lightweight alternative to Next.js built around React Suspense, ES modules, and esbuild. The project is no longer maintained because its underlying bundler, Snowpack, was discontinued.",
+	// 	buttons: [
+	// 		{
+	// 			link: "https://github.com/explodingcamera/snowstorm",
+	// 			name: "GitHub",
+	// 		},
+	// 		// {
+	// 		// 	link: "https://snowstorm.js.org",
+	// 		// 	name: "snowstorm.js.org",
+	// 		// },
+	// 	],
+	// },
 	{
 		title: "Etournity",
 		from: "2020",
 		img: "etournity.webp",
-		text: "Etournity wants gamers to organize and participate in online esports tournaments effortlessly.\n\nI joined the Etournity team as a developer in the summer of 2020. My focus was on transitioning the project to next.js and securing the GraphQL API.",
+		text: "Esports tournament platform. I worked on migrating the frontend to Next.js and improving GraphQL API security.",
 		buttons: [
 			{
 				link: "https://etournity.com",
@@ -181,11 +169,11 @@ export const projects = [
 		title: "FantasyMarket",
 		from: "2020",
 		img: "fantasymarket.webp",
-		text: "FantasyMarket is a working stock market simulation where the user can invest in-game currency in a simulated market.",
+		text: "Stock market simulation where users invest in-game currency in a simulated market.",
 		buttons: [
 			{
 				link: "https://github.com/fantasymarket",
-				name: "code",
+				name: "GitHub",
 			},
 		],
 	},
@@ -193,19 +181,19 @@ export const projects = [
 		title: "recordskip",
 		from: "2019",
 		img: "recordskip.jpeg",
-		text: "Recordskip is an app for vinyl record lovers tracks your collection with the help of Image Recognition and gives you music recommendations for expanding your musical horizons.",
+		text: "Mobile app for vinyl collectors that used image recognition to catalogue records and recommend new music.",
 		buttons: [
 			{
 				link: "https://github.com/recordskip/recordskip-app",
-				name: "code",
+				name: "GitHub",
 			},
 		],
 	},
 	{
 		title: "canX",
-		from: "2018 - 2020",
+		from: "2018-2020",
 		img: "canx-min.webp",
-		text: "I co-founded canX with the goal of creating a fairer platform for creators and their fans. Written in Go and React, with a custom CDN and video encoding pipeline.",
+		text: "I co-founded canX, a multimedia streaming and social platform. I worked on Go and React applications, backend services, a custom CDN, and a video encoding pipeline.",
 		buttons: [
 			{
 				link: "https://canx.gmbh",
@@ -213,40 +201,40 @@ export const projects = [
 			},
 		],
 	},
-	{
-		title: "livecount.pro",
-		from: "2017 - 2019",
-		img: "livecount-min.webp",
-		text: "LiveCount Pro (now discontinued) was a real-time anaylytics platform and dashboard with support for multiple social networks and multiple channels simultaneously.",
-		buttons: [
-			{
-				link: "https://github.com/explodingcamera/livecount.pro",
-				name: "code",
-			},
-		],
-	},
+	// {
+	// 	title: "livecount.pro",
+	// 	from: "2017 - 2019",
+	// 	img: "livecount-min.webp",
+	// 	text: "LiveCount Pro (now discontinued) was a real-time anaylytics platform and dashboard with support for multiple social networks and multiple channels simultaneously.",
+	// 	buttons: [
+	// 		{
+	// 			link: "https://github.com/explodingcamera/livecount.pro",
+	// 			name: "GitHub",
+	// 		},
+	// 	],
+	// },
 	{
 		title: "musiqpad",
 		from: "2016",
 		img: "musiqpad-min.webp",
-		text: "Musiqpad ia an open-source social-music software platform for users to host their own chatrooms and enjoy music together with others.\n\nI worked on modernizing the codebase and finding and fixing security vulnerabilities.",
+		text: "Open-source social music platform for self-hosted chatrooms. I worked on modernizing the codebase and fixing security vulnerabilities.",
 		buttons: [
 			{
 				link: "https://github.com/musiqpad/mqp-server",
-				name: "code",
+				name: "GitHub",
 			},
 		],
 	},
-	{
-		title: "musiqplus",
-		from: "2015-2016",
-		img: "musiqplus.webp",
-		text: "MusiqPlus is a Google Chrome extension that enhanced the experience on musiqpad servers with a ton of extra features. This started my involvement with Musiqpad and was one of my first larger projects.",
-		buttons: [
-			{
-				link: "https://github.com/explodingcamera/musiqplus",
-				name: "code",
-			},
-		],
-	},
+	// {
+	// 	title: "musiqplus",
+	// 	from: "2015-2016",
+	// 	img: "musiqplus.webp",
+	// 	text: "MusiqPlus is a Google Chrome extension that enhanced the experience on musiqpad servers with a ton of extra features. This started my involvement with Musiqpad and was one of my first larger projects.",
+	// 	buttons: [
+	// 		{
+	// 			link: "https://github.com/explodingcamera/musiqplus",
+	// 			name: "GitHub",
+	// 		},
+	// 	],
+	// },
 ];
