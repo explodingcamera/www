@@ -3,8 +3,8 @@
 	"assist": {
 		"enabled": true,
 		"actions": {
-			"recommended": true,
-			"source": { "recommended": true, "organizeImports": "off" }
+			"preset": "recommended",
+			"source": { "preset": "recommended", "organizeImports": "off" }
 		}
 	},
 	"formatter": {
@@ -31,7 +31,8 @@
 			},
 			"a11y": {
 				"useSemanticElements": "off",
-				"noStaticElementInteractions": "off"
+				"noStaticElementInteractions": "off",
+				"noSvgWithoutTitle": "off"
 			},
 			"style": {
 				"noDescendingSpecificity": "off"

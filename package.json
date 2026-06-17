@@ -10,18 +10,18 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "3.7.2",
+		"@astrojs/sitemap": "3.7.3",
 		"@explodingcamera/css": "^0.0.4",
-		"astro": "6.3.3",
+		"astro": "6.4.7",
 		"feather-icons": "^4.29.2",
 		"lightningcss": "^1.32.0",
-		"react": "^19.2.6",
-		"react-dom": "^19.2.6",
+		"react": "^19.2.7",
+		"react-dom": "^19.2.7",
 		"three": "^0.184.0",
 		"typescript": "^6.0.3"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.15",
+		"@biomejs/biome": "^2.5.0",
 		"@types/three": "^0.184.1"
 	},
 	"trustedDependencies": [
