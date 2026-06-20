@@ -1,5 +1,17 @@
 export const projects = [
 	{
+		title: "Open Source",
+		from: "2016-now",
+		text: "I build and maintain open-source projects across Rust, WebAssembly, web infrastructure, developer tooling, and self-hosted software. My work ranges from long-running projects to smaller libraries and experiments.",
+		buttons: [
+			{
+				link: "https://github.com/explodingcamera",
+				name: "GitHub",
+			},
+		],
+	},
+
+	{
 		title: "tinywasm",
 		from: "2023-now",
 		img: "tinywasm.png",
@@ -28,17 +40,7 @@ export const projects = [
 			},
 		],
 	},
-	// {
-	// 	title: "Open Source",
-	// 	from: "2016-now",
-	// 	text: "I build and maintain open-source projects across Rust, WebAssembly, web infrastructure, developer tooling, and self-hosted software. My work ranges from long-running projects to smaller libraries and experiments.",
-	// 	buttons: [
-	// 		{
-	// 			link: "https://github.com/explodingcamera",
-	// 			name: "GitHub",
-	// 		},
-	// 	],
-	// },
+
 	// {
 	// 	title: "Creating an Operating System in Rust",
 	// 	from: "2023",
