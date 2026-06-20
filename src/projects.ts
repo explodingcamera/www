@@ -1,10 +1,5 @@
 export const projects = [
 	{
-		title: "AnyDesk Software GmbH",
-		from: "2025-now",
-		text: "I work at AnyDesk as a Backend Engineer, developing core services for large-scale remote connectivity infrastructure. My work focuses on high-throughput Rust services, reliability and performance.",
-	},
-	{
 		title: "tinywasm",
 		from: "2023-now",
 		img: "tinywasm.png",
@@ -16,11 +11,7 @@ export const projects = [
 			},
 		],
 	},
-	{
-		title: "Freelance",
-		from: "2022-2024",
-		text: "I worked with clients across different industries, delivering web and mobile applications, backend services, and custom technical solutions. This gave me broad experience across product development, client communication, and varied technology stacks.",
-	},
+
 	{
 		title: "Liwan",
 		from: "2024-now",
