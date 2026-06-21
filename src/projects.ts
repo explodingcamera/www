@@ -1,5 +1,16 @@
 export const projects = [
 	{
+		title: "Professional Work",
+		from: "2017-now",
+		text: "I work on backend infrastructure, WebAssembly, developer tooling, and self-hosted software, with experience building production systems, open-source projects, and technical products end-to-end.",
+		buttons: [
+			{
+				link: "https://henrygressmann.de/static/henry-gressmann-cv.pdf",
+				name: "Download CV",
+			},
+		],
+	},
+	{
 		title: "Open Source",
 		from: "2016-now",
 		text: "I build and maintain open-source projects across Rust, WebAssembly, web infrastructure, developer tooling, and self-hosted software. My work ranges from long-running projects to smaller libraries and experiments.",
@@ -10,12 +21,11 @@ export const projects = [
 			},
 		],
 	},
-
 	{
 		title: "tinywasm",
 		from: "2023-now",
 		img: "tinywasm.png",
-		text: "Open-source WebAssembly runtime written in Rust, with 500+ GitHub stars. Designed for portability, safe execution, minimal dependencies, and constrained environments such as embedded systems.",
+		text: "Open-source WebAssembly runtime written in Rust, with 500+ GitHub stars. Designed for safe execution, portability, and minimal dependencies, with an internal bytecode format for efficient interpretation.",
 		buttons: [
 			{
 				link: "https://github.com/explodingcamera/tinywasm",
@@ -23,7 +33,6 @@ export const projects = [
 			},
 		],
 	},
-
 	{
 		title: "Liwan",
 		from: "2024-now",
@@ -185,7 +194,7 @@ export const projects = [
 		title: "canX",
 		from: "2018-2020",
 		img: "canx-min.webp",
-		text: "I co-founded canX, a multimedia streaming and social platform. I worked on Go and React applications, backend services, a custom CDN, and a video encoding pipeline.",
+		text: "I co-founded canX, a multimedia streaming and social platform. I led a 3-person development team and worked across product, React Native and Next.js applications, Go backend services, media infrastructure, a custom video player, CDN-backed media delivery, and video processing.",
 		buttons: [
 			{
 				link: "https://canx.gmbh",
