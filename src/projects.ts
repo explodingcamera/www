@@ -49,23 +49,38 @@ export const projects = [
 			},
 		],
 	},
-
-	// {
-	// 	title: "Creating an Operating System in Rust",
-	// 	from: "2023",
-	// 	img: "os.webp",
-	// 	text: "A series of blog posts guiding you through the process of creating an operating system in Rust",
-	// 	buttons: [
-	// 		{
-	// 			link: "https://blog.henrygressmann.de/series/rust-os/",
-	// 			name: "blog",
-	// 		},
-	// 		{
-	// 			link: "https://github.com/explodingcamera/pogos",
-	// 			name: "GitHub",
-	// 		},
-	// 	],
-	// },
+	{
+		title: "Creating an RISC-V Operating System in Rust",
+		from: "2023",
+		img: "os.webp",
+		text: "Blog series and codebase exploring operating-system development in Rust by building a small RISC-V microkernel from scratch.",
+		buttons: [
+			{
+				link: "https://blog.henrygressmann.de/series/rust-os/",
+				name: "blog",
+			},
+			{
+				link: "https://github.com/explodingcamera/rust-os-blog",
+				name: "GitHub",
+			},
+		],
+	},
+	{
+		title: "Last.fm Iceberg Chart Generator",
+		from: "2024-now",
+		img: "lastfm-iceberg.avif",
+		text: "A web tool for generating shareable iceberg charts from Last.fm listening history. Built as a small creative project, it has reached over 200k unique visitors through organic sharing and continues to periodically go viral on social platforms.",
+		buttons: [
+			{
+				link: "https://lastfm-iceberg.dawdle.space/",
+				name: "Website",
+			},
+			{
+				link: "https://github.com/explodingcamera/lastfm-iceberg",
+				name: "GitHub",
+			},
+		],
+	},
 	{
 		title: "dawdle.space",
 		from: "2023-now",
@@ -122,38 +137,35 @@ export const projects = [
 	// 		},
 	// 	],
 	// },
-	// {
-	// 	title: "pog.network",
-	// 	from: "2021-2022",
-	// 	img: "pog.network.webp",
-	// 	text: "With POG.network we're striving to build a green and fast cryptocurrency. I'm the team lead, designed the protocol and created the architecture of the project",
-	// 	buttons: [
-	// 		{
-	// 			link: "https://github.com/pognetwork",
-	// 			name: "GitHub",
-	// 		},
-	// 		{
-	// 			link: "https://pog.network",
-	// 			name: "pog.network",
-	// 		},
-	// 	],
-	// },
-	// {
-	// 	title: "Snowstorm",
-	// 	from: "2021-2022",
-	// 	img: "snowstorm.webp",
-	// 	text: "Lightweight alternative to Next.js built around React Suspense, ES modules, and esbuild. The project is no longer maintained because its underlying bundler, Snowpack, was discontinued.",
-	// 	buttons: [
-	// 		{
-	// 			link: "https://github.com/explodingcamera/snowstorm",
-	// 			name: "GitHub",
-	// 		},
-	// 		// {
-	// 		// 	link: "https://snowstorm.js.org",
-	// 		// 	name: "snowstorm.js.org",
-	// 		// },
-	// 	],
-	// },
+
+	{
+		title: "Snowstorm",
+		from: "2021-2022",
+		img: "snowstorm.webp",
+		text: "Minimal React framework built around React Suspense, ES modules, and esbuild. The project is archived, but explored ideas around lightweight frontend tooling before the current generation of build tools matured.",
+		buttons: [
+			{
+				link: "https://github.com/explodingcamera/snowstorm",
+				name: "GitHub",
+			},
+			// {
+			// 	link: "https://snowstorm.js.org",
+			// 	name: "snowstorm.js.org",
+			// },
+		],
+	},
+	{
+		title: "pog.network",
+		from: "2021-2022",
+		img: "pog.network.webp",
+		text: "Experimental cryptocurrency protocol project. I led the technical direction, designed parts of the protocol, and worked across the Rust reference implementation, shared API definitions, and frontend applications.",
+		buttons: [
+			{
+				link: "https://github.com/pognetwork",
+				name: "GitHub",
+			},
+		],
+	},
 	{
 		title: "Etournity",
 		from: "2020",
