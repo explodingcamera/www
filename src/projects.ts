@@ -5,7 +5,7 @@ export const projects = [
 		text: "I work on backend infrastructure, WebAssembly, developer tooling, and self-hosted software, with experience building production systems, open-source projects, and technical products end-to-end.",
 		buttons: [
 			{
-				link: "https://henrygressmann.de/static/henry-gressmann-cv.pdf",
+				link: "https://henrygressmann.de/static/cv-henry-gressmann.pdf",
 				name: "Download CV",
 			},
 		],
