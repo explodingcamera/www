@@ -38,14 +38,14 @@ const { title, from, img, text, buttons }: Props = Astro.props;
 
 <style>
   .project:hover {
-    background: #1b1b1d80;
+    background: #111213ed;
   }
 
   .project {
     display: flex;
     flex-direction: column;
     border-radius: 12px;
-    background: #0f10119d;
+    background: #0e0f10ed;
     transition: all 0.2s linear;
 
     margin-bottom: 1rem;
@@ -60,15 +60,17 @@ const { title, from, img, text, buttons }: Props = Astro.props;
       justify-content: space-between;
       font-size: 1.7rem;
       letter-spacing: -1px;
-      align-items: center;
+      align-items: flex-start;
 
       span {
         padding-left: 0.5rem;
+        padding-top: 0.5rem;
         font-weight: 400;
         font-feature-settings: "ss12" 1;
         font-size: 1rem;
-        color: aqua;
+        color: #cdcdcd;
         letter-spacing: -0.3px;
+        word-break: keep-all;
       }
     }
 
@@ -98,7 +100,6 @@ const { title, from, img, text, buttons }: Props = Astro.props;
     display: flex;
     align-items: center;
     color: rgb(255, 255, 255);
-    height: 2.7rem;
     font-size: 1rem;
     font-weight: 400;
     box-shadow:
@@ -106,7 +107,7 @@ const { title, from, img, text, buttons }: Props = Astro.props;
       rgba(0, 0, 0, 0.055) 0px 3px 1px -2px,
       rgba(0, 0, 0, 0.027) 0px 1px 5px 0px;
     margin: 0px 0.5rem 0px 0px;
-    padding: 0px 0.8rem;
+    padding: 0.4rem 0.5rem;
     outline: none;
     border-width: initial;
     border-style: none;

@@ -57,7 +57,7 @@ export const projects = [
 		buttons: [
 			{
 				link: "https://blog.henrygressmann.de/series/rust-os/",
-				name: "blog",
+				name: "Blog Series",
 			},
 			{
 				link: "https://github.com/explodingcamera/rust-os-blog",

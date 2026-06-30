@@ -14,120 +14,100 @@ export interface MasonryGridProps {
 
 const TEMPLATE_STRING = `
 <style>
-  :host {
-    display: block;
-    --breakpoint-sm: 660;
-    --breakpoint-md: 1080;
-    --column-gap: 1rem;
-  }
+	:host {
+		display: block;
+		container-type: inline-size;
 
-  #grid {
-    gap: var(--column-gap);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+		--masonry-sm: 1;
+		--masonry-md: 2;
+		--masonry-lg: 3;
 
-  #grid > div {
-    flex: 1;
-    break-inside: avoid;
-  }
+		--column-gap: 1rem;
+		--row-gap: var(--column-gap);
 
-  #items {
-    opacity: 0;
-    position: absolute;
-    top: 10000px;
-    left: 10000px;
-  }
+		contain: layout paint;
+	}
+
+	#items {
+		column-count: var(--masonry-lg);
+		column-gap: var(--column-gap);
+	}
+
+	@container (width <= 1080px) {
+		#items {
+			column-count: var(--masonry-md);
+		}
+	}
+
+	@container (width <= 660px) {
+		#items {
+			column-count: var(--masonry-sm);
+		}
+	}
+
+	slot {
+		display: contents;
+	}
+
+	::slotted(*) {
+		display: block;
+		break-inside: avoid;
+		page-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+		margin-block-end: var(--row-gap);
+	}
 </style>
-<div id="items">
-  <slot></slot>
+
+<div id="items" part="grid">
+	<slot></slot>
 </div>
-<div id="grid" part="grid"></div>
 `;
 
 class MasonryComponent extends HTMLElement {
 	#shadow: ShadowRoot;
-	#resizeObserver: ResizeObserver | null = null;
-	#columns = 0;
-	#grid: HTMLDivElement;
 
 	constructor() {
 		super();
+
 		this.#shadow = this.attachShadow({ mode: "open" });
 
 		const template = document.createElement("template");
 		template.innerHTML = TEMPLATE_STRING;
 
 		this.#shadow.appendChild(template.content.cloneNode(true));
-		if (!this.shadowRoot) throw new Error("Shadow root not found");
-		const grid = this.shadowRoot.querySelector<HTMLDivElement>("#grid");
-		if (!grid) throw new Error("Grid not found");
-		this.#grid = grid;
-	}
-
-	connectedCallback() {
-		this.renderColumns();
-		this.#resizeObserver = new ResizeObserver(() => {
-			this.renderColumns();
-		});
-		this.#resizeObserver.observe(this);
-	}
-
-	disconnectedCallback() {
-		this.#resizeObserver?.disconnect();
 	}
 
 	static get observedAttributes() {
 		return ["sm", "md", "lg"];
 	}
 
+	connectedCallback() {
+		this.#syncAttributes();
+	}
+
 	attributeChangedCallback() {
-		this.renderColumns();
+		this.#syncAttributes();
 	}
 
-	renderColumns() {
-		const width = this.clientWidth;
-		let numColumns: number;
+	#syncAttributes() {
+		this.style.setProperty("--masonry-sm", String(this.#parseColumnCount(this.getAttribute("sm"), 1)));
 
-		const sm = Number.parseInt(getComputedStyle(this).getPropertyValue("--breakpoint-sm"), 10);
-		const md = Number.parseInt(getComputedStyle(this).getPropertyValue("--breakpoint-md"), 10);
+		this.style.setProperty("--masonry-md", String(this.#parseColumnCount(this.getAttribute("md"), 2)));
 
-		if (width <= sm) {
-			numColumns = Number.parseInt(this.getAttribute("sm") || "1", 10);
-		} else if (width <= md) {
-			numColumns = Number.parseInt(this.getAttribute("md") || "2", 10);
-		} else {
-			numColumns = Number.parseInt(this.getAttribute("lg") || "3", 10);
-		}
-
-		if (numColumns === this.#columns) return;
-
-		// remove existing columns
-		while (this.#grid.firstChild) {
-			this.#grid.removeChild(this.#grid.firstChild);
-		}
-
-		for (let i = 0; i < numColumns; i++) {
-			const columnDiv = document.createElement("div");
-			const columnSlot = document.createElement("slot");
-			columnSlot.name = `column-${i}`;
-			columnDiv.append(columnSlot);
-			this.#grid.appendChild(columnDiv);
-		}
-		this.#columns = numColumns;
-		this.renderItems();
+		this.style.setProperty("--masonry-lg", String(this.#parseColumnCount(this.getAttribute("lg"), 3)));
 	}
 
-	renderItems() {
-		const children = Array.from(this.children);
+	#parseColumnCount(value: string | null, fallback: number) {
+		const parsed = Number.parseInt(value ?? "", 10);
 
-		for (const [i, child] of children.entries()) {
-			const columnIndex = i % this.#columns;
-			const column = `column-${columnIndex}`;
-			if (child.slot !== column) child.slot = column;
+		if (!Number.isFinite(parsed) || parsed < 1) {
+			return fallback;
 		}
+
+		return parsed;
 	}
 }
 
-customElements.define("masonry-grid", MasonryComponent);
+if (!customElements.get("masonry-grid")) {
+	customElements.define("masonry-grid", MasonryComponent);
+}
