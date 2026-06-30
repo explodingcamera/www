@@ -6,7 +6,7 @@ export class StarfieldBG {
 	#renderer!: THREE.WebGLRenderer;
 	#scene!: THREE.Scene;
 	#camera!: THREE.PerspectiveCamera;
-	#clock!: THREE.Clock;
+	#timer!: THREE.Timer;
 	#points!: THREE.Points;
 
 	constructor(canvas: HTMLCanvasElement) {
@@ -77,7 +77,7 @@ export class StarfieldBG {
 		this.#scene.add(this.#points);
 
 		// Initialize clock
-		this.#clock = new THREE.Clock();
+		this.#timer = new THREE.Timer();
 
 		this.#animate();
 		this.#addResizeListener();
@@ -139,7 +139,8 @@ export class StarfieldBG {
 			}, 1000 / 60);
 		});
 
-		const delta = this.#clock.getDelta();
+		this.#timer.update();
+		const delta = this.#timer.getDelta();
 		this.#points.rotation.x -= delta / 10;
 		this.#points.rotation.y += delta / 25;
 
@@ -149,7 +150,7 @@ export class StarfieldBG {
 		this.#points.position.x += xDiff * 0.1;
 		this.#points.position.y += yDiff * 0.1;
 
-		const opacity = Math.max((this.#clock.elapsedTime - 0.3) / 5, 0);
+		const opacity = Math.max((this.#timer.getElapsed() - 0.3) / 5, 0);
 		if (opacity <= 1) {
 			(this.#points.material as THREE.PointsMaterial).opacity = opacity;
 		}

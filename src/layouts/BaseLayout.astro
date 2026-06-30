@@ -7,6 +7,7 @@ const { title } = Astro.props;
 
 import "@explodingcamera/css/all.css";
 import "./../global.css";
+import tracker from "liwan-tracker?raw";
 
 import { ClientRouter } from "astro:transitions";
 ---
@@ -50,7 +51,9 @@ import { ClientRouter } from "astro:transitions";
     <script
       type="module"
       data-entity="henrygressmann.de"
-      src="https://a.explodingcamera.com/script.js"
-      is:inline></script>
+      data-api="https://a.explodingcamera.com/api/event"
+      set:html={tracker}
+      is:inline
+     ></script>
   </body>
 </html>
