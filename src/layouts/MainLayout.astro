@@ -22,7 +22,7 @@ const { title, backgroundColor, disableHeader, disableBackground } = Astro.props
   </div>
   <div class="layoutwrapper">
     {!disableHeader && <Header />}
-    <div transition:animate="initial">
+    <div>
       <slot />
     </div>
   </div>

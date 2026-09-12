@@ -10,20 +10,20 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "3.7.3",
+		"@astrojs/sitemap": "3.7.4",
 		"@explodingcamera/css": "^0.0.4",
-		"astro": "7.0.7",
+		"astro": "7.3.2",
 		"feather-icons": "^4.29.2",
-		"lightningcss": "^1.32.0",
+		"lightningcss": "^1.33.0",
 		"liwan-tracker": "^1.2.1",
-		"react": "^19.2.7",
-		"react-dom": "^19.2.7",
-		"three": "^0.185.1",
+		"react": "^19.3.0",
+		"react-dom": "^19.3.0",
+		"three": "^0.186.0",
 		"typescript": "^7.0.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.5.3",
-		"@types/three": "^0.185.1"
+		"@biomejs/biome": "^2.5.13",
+		"@types/three": "^0.186.0"
 	},
 	"trustedDependencies": [
 		"core-js",

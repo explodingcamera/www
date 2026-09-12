@@ -66,6 +66,18 @@ export const projects = [
 		],
 	},
 	{
+		title: "dawdle.space",
+		from: "2023-now",
+		img: "dawdle2.webp",
+		text: "Community platform for sharing art, free software, and personal websites. Includes custom infrastructure for hosted sites, interactive editing, and code execution.",
+		buttons: [
+			{
+				link: "https://dawdle.space",
+				name: "dawdle.space",
+			},
+		],
+	},
+	{
 		title: "Last.fm Iceberg Chart Generator",
 		from: "2024-now",
 		img: "lastfm-iceberg.avif",
@@ -78,18 +90,6 @@ export const projects = [
 			{
 				link: "https://github.com/explodingcamera/lastfm-iceberg",
 				name: "GitHub",
-			},
-		],
-	},
-	{
-		title: "dawdle.space",
-		from: "2023-now",
-		img: "dawdle2.webp",
-		text: "Community platform for sharing art, free software, and personal websites. Includes custom infrastructure for hosted sites, interactive editing, and code execution.",
-		buttons: [
-			{
-				link: "https://dawdle.space",
-				name: "dawdle.space",
 			},
 		],
 	},

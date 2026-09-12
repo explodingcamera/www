@@ -3,6 +3,10 @@ html {
   font-family: "Euclid Square", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+masonry-grid:not([data-layout-ready]) {
+  visibility: hidden;
+}
+
 #nprogress .bar {
   background: linear-gradient(270deg, #ff0000, #008cff, #50ff00);
 }
