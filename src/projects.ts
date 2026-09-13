@@ -36,7 +36,7 @@ export const projects = [
 	{
 		title: "Liwan",
 		from: "2024-now",
-		img: "liwan.webp",
+		img: "liwan-social-preview.png",
 		text: "Open-source, privacy-focused web analytics written in Rust. Liwan is designed for self-hosted deployment with a single binary, low operational overhead, and privacy-preserving analytics without cookies, cross-site tracking, or persistent identifiers.",
 		buttons: [
 			{
@@ -52,7 +52,7 @@ export const projects = [
 	{
 		title: "Creating an RISC-V Operating System in Rust",
 		from: "2023",
-		img: "os.webp",
+		img: "os.png",
 		text: "Blog series and codebase exploring operating-system development in Rust by building a small RISC-V microkernel from scratch.",
 		buttons: [
 			{
@@ -68,7 +68,7 @@ export const projects = [
 	{
 		title: "dawdle.space",
 		from: "2023-now",
-		img: "dawdle2.webp",
+		img: "dawdle.png",
 		text: "Community platform for sharing art, free software, and personal websites. Includes custom infrastructure for hosted sites, interactive editing, and code execution.",
 		buttons: [
 			{
