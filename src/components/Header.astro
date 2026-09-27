@@ -44,8 +44,8 @@ import HeaderItem from "./HeaderItem.astro";
     }
   }
 
-  .header :global(.icon) {
-    margin: 0;
+  .header :global(svg) {
+    transform: translateY(1px);
   }
 
   .header :global(a.link:hover) {
@@ -70,7 +70,6 @@ import HeaderItem from "./HeaderItem.astro";
       aria-label="GitHub"
       href="https://github.com/explodingcamera"
       newTab
-      class:list={["icon"]}
     >
       <Fragment set:html={code} />
     </HeaderItem>
