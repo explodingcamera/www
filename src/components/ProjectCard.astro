@@ -3,62 +3,76 @@ type Props = {
 	title: string;
 	from: string;
 	img?: string;
-	text: string;
-	buttons?: Array<{ link: string; name: string }>;
+	href?: string;
+	text: Array<string | { link: string; name: string }>;
 };
 
-const { title, from, img, text, buttons }: Props = Astro.props;
+const { title, from, img, href, text }: Props = Astro.props;
+const primaryLinkIndex = text.findIndex((part) => typeof part !== "string");
 ---
 
 <div class="project">
-  <h1>
-    {title}
-    <span>{from}</span>
-  </h1>
   {
     img && (
       <div class="image">
-        <img src={`../static/projects/${img}`} alt={title} />
+        <img src={`../static/projects/${img}`} alt={title} class:list={{ snowstorm: img === "snowstorm.webp" }} />
       </div>
     )
   }
-  <p>{text}</p>
-  {
-    buttons && (
-      <div>
-        {buttons.map((b) => (
-          <a target="_blank" rel="noopener noreferrer" href={b.link}>
-            <button>{b.name}</button>
-          </a>
-        ))}
-      </div>
-    )
-  }
+  <div class="content">
+    <h1>
+      {title}
+      <span>{from}</span>
+    </h1>
+    <p>
+      {
+        text.map((part, index) =>
+          typeof part === "string" ? (
+            part
+          ) : (
+            <a
+              class:list={{ primary: index === primaryLinkIndex }}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={part.link}
+            >
+              {part.name}
+            </a>
+          ),
+        )
+      }
+    </p>
+  </div>
+  {href && <a class="card-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${title}`}></a>}
 </div>
 
 <style>
-  .project:hover {
-    background: #111213ed;
-  }
-
   .project {
+    position: relative;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
-    background: #0e0f10ed;
-    transition: background-color 0.2s linear;
+    overflow: hidden;
+    background: #0e0f10;
 
     margin-bottom: 1rem;
 
-    --padding-lr: 1.3rem;
-    padding: 1.1rem var(--padding-lr);
-    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.14);
+    .content {
+      padding: 1.1rem 1.3rem;
+    }
+
+    .image + .content {
+      z-index: 1;
+      margin-top: -2.5rem;
+      padding-top: 0;
+    }
 
     h1 {
       margin-bottom: 1rem;
       display: flex;
       justify-content: space-between;
       font-size: 1.7rem;
+      text-transform: lowercase;
       letter-spacing: -1px;
       align-items: flex-start;
 
@@ -75,51 +89,38 @@ const { title, from, img, text, buttons }: Props = Astro.props;
     }
 
     p {
+      color: #d0d0d0;
       font-size: 1.1rem;
       margin: 0;
       line-height: 1.4;
-      text-shadow: 0px 0px 5px black;
       white-space: pre-line;
     }
 
-    div:last-of-type {
-      margin-top: 1rem;
-      display: flex;
-      a {
-        text-decoration: none;
-      }
+    p a:not(.primary) {
+      position: relative;
+      z-index: 2;
     }
-  }
 
-  .project button {
-    border-radius: 8px;
-    text-decoration: none;
-    user-select: none;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    font-weight: 400;
-    box-shadow:
-      rgba(0, 0, 0, 0.02) 0px 2px 2px 0px,
-      rgba(0, 0, 0, 0.055) 0px 3px 1px -2px,
-      rgba(0, 0, 0, 0.027) 0px 1px 5px 0px;
-    margin: 0px 0.5rem 0px 0px;
-    padding: 0.4rem 0.5rem;
-    outline: none;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-    /* background-color: #46424266; */
-    background-color: #00000000;
-    border: 1.7px solid #46424266;
-    transition: all 0.2s ease-in-out 0s;
-    box-sizing: content-box;
-    &:hover {
-      border: 1.7px solid #ffffff;
+    a.primary::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    a.primary:focus-visible::before {
+      outline: 2px solid var(--accent-color);
+      outline-offset: -2px;
+    }
+
+    .card-link {
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+    }
+
+    .card-link:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: -2px;
     }
   }
 
@@ -127,18 +128,27 @@ const { title, from, img, text, buttons }: Props = Astro.props;
     position: relative;
     aspect-ratio: 16/9;
     background-color: black;
-    margin-bottom: 1rem;
     overflow: hidden;
-    width: calc(100% + var(--padding-lr) * 2);
-    margin-left: calc(-1 * var(--padding-lr));
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom in oklab, transparent 35%, rgb(14 15 16 / 0.45) 70%, #0e0f10);
+      pointer-events: none;
+    }
 
     img {
-      height: inherit;
-      width: 100%;
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
       overflow: hidden;
+
+      &.snowstorm {
+        filter: invert(1) contrast(2) hue-rotate(180deg);
+      }
     }
   }
 </style>

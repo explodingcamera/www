@@ -100,12 +100,9 @@ import MainLayout from "../layouts/MainLayout.astro";
       necessary to display the website and ensure stability, performance, and
       security. The legal basis is Art. 6 para. 1 lit. f GDPR.
       <br />
-      <br />
       I use the following providers to make this website available:
-      <br />
     </p>
 
-    <br />
     <h3>Hetzner Online GmbH</h3>
     <p>
       Industriestr. 25, 91710 Gunzenhausen
@@ -115,7 +112,6 @@ import MainLayout from "../layouts/MainLayout.astro";
       </Link>
     </p>
 
-    <br />
     <h3>GitHub Pages</h3>
     <p>
       GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. GitHub
@@ -144,7 +140,6 @@ import MainLayout from "../layouts/MainLayout.astro";
       </Link>
     </p>
 
-    <br />
     <h3>Cloudflare</h3>
     <p>
       Cloudflare Germany GmbH, Rosental 7, c/o Mindspace, 80331 München, Germany
@@ -203,35 +198,35 @@ import MainLayout from "../layouts/MainLayout.astro";
 <style>
   section.privacy {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-width: 70ch;
+    padding: 1rem 0 3rem;
 
     h1 {
-      font-size: 3em;
-      margin-top: 4rem;
+      font-size: 2rem;
+      text-transform: lowercase;
+      margin-bottom: 0.75rem;
     }
 
     h2 {
-      font-size: 2em;
-      margin-top: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      margin-bottom: 0.4rem;
     }
 
     h3 {
-      margin-top: 2rem;
+      font-size: 1.15rem;
+      margin-top: 1.25rem;
     }
 
-    a {
-      display: inline-block;
+    :global(a.link) {
+      overflow-wrap: anywhere;
     }
 
     p {
-      margin-top: 0.5rem;
-      font-size: 1.3rem;
-      line-height: 1.7;
-      max-width: 60rem;
-      color: #ececec;
+      margin-top: 0.4rem;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: #d6d6d6;
     }
   }
 </style>

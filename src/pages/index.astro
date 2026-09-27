@@ -9,11 +9,11 @@ import Layout from "../layouts/MainLayout.astro";
       <span>Hi!</span> I'm Henry.
 
       <br /><br />
-      <Link href="/work">My work</Link>
+      <Link href="/work">my work</Link>
       <br />
-      <Link href="/me">About me</Link>
+      <Link href="/me">about me</Link>
       <br />
-      <Link href="mailto:hi@henrygressmann.de">Contact</Link>
+      <Link href="mailto:hi@henrygressmann.de">contact</Link>
     </h2>
   </div>
 </Layout>
@@ -24,15 +24,6 @@ import Layout from "../layouts/MainLayout.astro";
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    h1 {
-      font-size: 8rem;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-image: linear-gradient(270deg, #ff0000, #008cff, #50ff00);
-      background-size: 600% 600%;
-      background-position: 79% 50%;
-    }
 
     h2 {
       font-size: 3rem;
@@ -46,19 +37,11 @@ import Layout from "../layouts/MainLayout.astro";
       }
 
       span {
-        font-weight: 400;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-image: linear-gradient(270deg, #ff0000, #008cff, #50ff00);
-        background-size: 600% 600%;
-        background-position: 79% 50%;
+        color: var(--accent-color);
       }
     }
 
     @media only screen and (max-width: 60rem) {
-      h1 {
-        font-size: 15vw;
-      }
       h2 {
         font-size: 5vw;
       }

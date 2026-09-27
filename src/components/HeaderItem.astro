@@ -3,15 +3,16 @@ import Link from "./Link.astro";
 type Props = {
 	"aria-label"?: string;
 	href: string;
-	gradient?: boolean;
+	prominent?: boolean;
 	class?: string;
 	newTab?: boolean;
 };
 
-const { href, newTab, gradient, class: className, "aria-label": ariaLabel } = Astro.props;
+const { href, newTab, prominent, class: className, "aria-label": ariaLabel } = Astro.props;
 
 const url = new URL(Astro.request.url);
-const active = url.pathname === href || url.pathname === `${href}.html`;
+const pathname = url.pathname.replace(/\.html$/, "").replace(/\/index$/, "") || "/";
+const active = pathname === href;
 ---
 
 <li class:list={[className, "item"]}>
@@ -19,7 +20,7 @@ const active = url.pathname === href || url.pathname === `${href}.html`;
     aria-label={ariaLabel}
     href={href}
     active={active}
-    animateFontColor={gradient}
+    prominent={prominent}
     target={newTab ? "_blank" : ""}
   >
     <slot />

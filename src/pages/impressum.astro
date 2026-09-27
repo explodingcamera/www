@@ -35,7 +35,6 @@ import MainLayout from "../layouts/MainLayout.astro";
       Henry Gressmann, address as stated above.
     </p>
     <p>
-      <br />
       This legal notice applies to the following websites, profiles, and projects
       operated by me:
       <br />
@@ -64,7 +63,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       proceedings before a consumer arbitration board.
     </p>
 
-    <h1>Privacy Policy</h1>
+    <h2>Privacy Policy</h2>
     <p>
       See&nbsp;
       <Link href="/privacy">Privacy Policy</Link>
@@ -75,35 +74,30 @@ import MainLayout from "../layouts/MainLayout.astro";
 <style>
   section.impressum {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-width: 70ch;
+    padding: 1rem 0 3rem;
 
     h1 {
-      font-size: 3em;
-      margin-top: 4rem;
+      font-size: 2rem;
+      text-transform: lowercase;
+      margin-bottom: 0.75rem;
     }
 
     h2 {
-      font-size: 2em;
-      margin-top: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h3 {
+      font-size: 1.3rem;
       margin-top: 2rem;
+      margin-bottom: 0.4rem;
     }
 
-    a {
-      display: inline-block;
+    :global(a.link) {
+      overflow-wrap: anywhere;
     }
 
     p {
-      margin-top: 0.5rem;
-      font-size: 1.3rem;
-      line-height: 1.7;
-      max-width: 60rem;
-      color: #ececec;
+      margin-top: 0.4rem;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: #d6d6d6;
     }
   }
 </style>

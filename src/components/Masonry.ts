@@ -23,7 +23,6 @@ const TEMPLATE_STRING = `
 		--masonry-lg: 3;
 
 		--column-gap: 1rem;
-		--row-gap: var(--column-gap);
 
 		contain: layout paint;
 	}
@@ -34,7 +33,7 @@ const TEMPLATE_STRING = `
 		grid-auto-rows: 1px;
 		align-items: start;
 		column-gap: var(--column-gap);
-		row-gap: var(--row-gap);
+		row-gap: 0;
 	}
 
 	@container (width <= 1080px) {
@@ -139,10 +138,10 @@ class MasonryComponent extends HTMLElement {
 			this.#animationFrame = undefined;
 			const styles = getComputedStyle(this.#items);
 			const rowHeight = Number.parseFloat(styles.gridAutoRows);
-			const rowGap = Number.parseFloat(styles.rowGap);
+			const gap = Number.parseFloat(styles.columnGap);
 
 			for (const item of this.#slot.assignedElements() as HTMLElement[]) {
-				const rowSpan = Math.ceil((item.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+				const rowSpan = Math.ceil((item.getBoundingClientRect().height + gap) / rowHeight);
 				item.style.gridRowEnd = `span ${rowSpan}`;
 			}
 

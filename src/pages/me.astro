@@ -1,5 +1,4 @@
 ---
-import Link from "../components/Link.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
@@ -18,14 +17,15 @@ import MainLayout from "../layouts/MainLayout.astro";
       <br />
       Outside of my professional work, I build open-source software around WebAssembly,
       privacy-focused analytics, and maintain various libraries.<br />
-      <br />
-      <br />
-
-      Feel free to reach out&nbsp;
-      <Link href="mailto:hi@henrygressmann.de">by email</Link>!
-       <!-- or check out my&nbsp; -->
-      <!-- <Link href="/static/cv-henry-gressmann.pdf">CV</Link>. -->
     </p>
+    <nav class="profiles" aria-label="Other links">
+      <a href="mailto:hi@henrygressmann.de">email</a>
+      <a href="https://github.com/explodingcamera" target="_blank" rel="noopener noreferrer">github</a>
+      <a href="https://www.linkedin.com/in/henrygressmann/" target="_blank" rel="noopener noreferrer">linkedin</a>
+      <a href="https://www.goodreads.com/user/show/129153443-henry" target="_blank" rel="noopener noreferrer">goodreads</a>
+      <a href="https://henry.dawdle.space/photos" target="_blank" rel="noopener noreferrer">photos</a>
+      <a href="/static/gpg.asc">gpg key</a>
+    </nav>
   </div>
 </MainLayout>
 
@@ -38,45 +38,40 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     h1 {
       font-size: 3em;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-image: linear-gradient(270deg, #ff0000, #008cff, #50ff00);
-      background-size: 600% 600%;
-      background-position: 79% 50%;
+      color: var(--cyan-accent);
     }
 
     p {
       font-size: 1.4rem;
       line-height: 1.5;
       max-width: 38rem;
+    }
+
+    .profiles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5em;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: #888;
+
       a {
-        white-space: nowrap;
-      }
+        color: #888;
+        font-weight: 400;
+        text-decoration: none;
+        transition: color 0.15s ease-out;
 
-      > span {
-        color: white;
-        padding: 0.1rem 0.4rem;
-        border-radius: 4px;
-        margin: 0.1rem 0.2rem;
-        backdrop-filter: blur(1px);
-        box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 35%);
-        white-space: nowrap;
-
-        &:nth-of-type(1) {
-          background-image: linear-gradient(270deg, #0b7261c1, #23d1b4c1);
+        &::before {
+          content: "[";
         }
 
-        /* &:nth-of-type(2) {
-          background-image: linear-gradient(270deg, #3179c6c1, #3179c6c1);
+        &::after {
+          content: "]";
         }
 
-        &:nth-of-type(3) {
-          background-image: linear-gradient(270deg, #61dafbc1, #45b4d3c1);
-        } */
-
-        &:nth-of-type(2) {
-          background-image: linear-gradient(270deg, #f0db4fc1, #f0db4fc1);
+        &:hover {
+          color: white;
         }
       }
     }

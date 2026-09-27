@@ -10,6 +10,7 @@ import "./../global.css";
 import tracker from "liwan-tracker?raw";
 
 import { ClientRouter } from "astro:transitions";
+import { Font } from "astro:assets";
 ---
 
 <html lang="en" transition:animate="fade">
@@ -36,13 +37,7 @@ import { ClientRouter } from "astro:transitions";
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <ClientRouter />
-    <link
-      rel="preconnect"
-      href="https://fonts.henrygressmann.de/fonts/euclid/EuclidSquare-Regular-WebS.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    <Font cssVariable="--font-google-sans" preload />
     <link rel="preconnect" href="https://a.explodingcamera.com" />
   </head>
   <body>
