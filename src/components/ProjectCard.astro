@@ -3,11 +3,12 @@ type Props = {
 	title: string;
 	from: string;
 	img?: string;
+	filters?: { filter: string; scale?: number; position?: string };
 	href?: string;
 	text: Array<string | { link: string; name: string }>;
 };
 
-const { title, from, img, href, text }: Props = Astro.props;
+const { title, from, img, filters, href, text }: Props = Astro.props;
 const primaryLinkIndex = text.findIndex((part) => typeof part !== "string");
 ---
 
@@ -15,7 +16,11 @@ const primaryLinkIndex = text.findIndex((part) => typeof part !== "string");
   {
     img && (
       <div class="image">
-        <img src={`../static/projects/${img}`} alt={title} class:list={{ snowstorm: img === "snowstorm.webp" }} />
+        <img
+          src={`../static/projects/${img}`}
+          alt={title}
+          style={filters && `filter: ${filters.filter}; transform: scale(${filters.scale ?? 1}); transform-origin: ${filters.position ?? "center"}`}
+        />
       </div>
     )
   }
@@ -146,9 +151,6 @@ const primaryLinkIndex = text.findIndex((part) => typeof part !== "string");
       object-fit: cover;
       overflow: hidden;
 
-      &.snowstorm {
-        filter: invert(1) contrast(2) hue-rotate(180deg);
-      }
     }
   }
 </style>

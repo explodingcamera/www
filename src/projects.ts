@@ -3,14 +3,14 @@ export const projects = [
 		title: "Professional Work",
 		from: "2017-now",
 		text: [
-			"I work on backend infrastructure, WebAssembly, developer tooling, and self-hosted software. I've built production systems and open-source projects end to end, from architecture to deployment.",
+			"I focus on scalable backend systems and infrastructure. I've also built apps and websites, with experience spanning large companies and freelance projects.",
 		],
 	},
 	{
 		title: "Open Source",
 		from: "2016-now",
 		text: [
-			"I maintain open-source projects in Rust, WebAssembly, developer tooling, and web infrastructure. Find them on ",
+			"I maintain various open-source projects and libraries, and contribute to others. Find my work on ",
 			{ link: "https://github.com/explodingcamera", name: "GitHub" },
 			".",
 		],
@@ -20,7 +20,7 @@ export const projects = [
 		from: "2023-now",
 		img: "tinywasm.png",
 		text: [
-			"A portable WebAssembly runtime written in Rust, with 500+ GitHub stars and an internal bytecode format for efficient execution. Explore it on ",
+			"An efficient WebAssembly 3.0 runtime written entirely in safe Rust. The code is on ",
 			{ link: "https://github.com/explodingcamera/tinywasm", name: "GitHub" },
 			".",
 		],
@@ -54,7 +54,9 @@ export const projects = [
 		from: "2023-now",
 		img: "dawdle.png",
 		href: "https://dawdle.space",
-		text: ["A community for art, free software, and personal websites, with hosted sites and interactive editing."],
+		text: [
+			"dawdle.space is a small community for handmade websites. For art, writing, games, blogs, experiments, and whatever else you're into.",
+		],
 	},
 	{
 		title: "Last.fm Iceberg Chart Generator",
@@ -117,8 +119,9 @@ export const projects = [
 		title: "Snowstorm",
 		from: "2021-2022",
 		img: "snowstorm.webp",
+		filters: { filter: "invert(1) contrast(2) hue-rotate(180deg)" },
 		text: [
-			"An archived React framework built around Suspense, ES modules, and esbuild. The code is on ",
+			"A React framework built around Suspense, ES modules, and esbuild. The code is on ",
 			{ link: "https://github.com/explodingcamera/snowstorm", name: "GitHub" },
 			".",
 		],
@@ -144,6 +147,7 @@ export const projects = [
 		title: "FantasyMarket",
 		from: "2020",
 		img: "fantasymarket.webp",
+		filters: { filter: "brightness(0.7) saturate(0.45)", scale: 1.2, position: "50% 80%" },
 		text: [
 			"A stock market simulation where users invest in-game currency. See the project on ",
 			{ link: "https://github.com/fantasymarket", name: "GitHub" },
@@ -163,6 +167,8 @@ export const projects = [
 	{
 		title: "canX",
 		from: "2018-2020",
+		img: "canx.webp",
+		filters: { filter: "brightness(0.7) saturate(0.45)", scale: 1.2, position: "30% 50%" },
 		text: ["I co-founded canX and led a three-person team building its apps, Go backend, and video infrastructure."],
 	},
 	// {
@@ -180,6 +186,8 @@ export const projects = [
 	{
 		title: "musiqpad",
 		from: "2016",
+		img: "musiqpad.webp",
+		filters: { filter: "brightness(0.7) saturate(0.45)", scale: 1.2 },
 		text: [
 			"Open-source social music platform for self-hosted chatrooms. I modernized the codebase and fixed security vulnerabilities. See ",
 			{ link: "https://github.com/musiqpad/mqp-server", name: "GitHub" },
